@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backyard</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+body {
+	margin-top: 50px;
+}
+</style>
+</head>
+<body>
+
+
+<nav class="container-fluid navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">
+			<img src="./resource/image/common/logo_mark.png" width="20" height="20" alt="Backyard">
+		</a>
+	</div>
+
+	<ul class="nav navbar-nav">
+		<li><a href="#">ダッシュボード</a></li>
+		<li><a href="#">プロジェクト</a></li>
+		<li><a href="#">最近見た課題</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li>
+					<div class="form-group">
+						<label class="sr-only" for="プロジェクトを検索">プロジェクトを検索</label>
+						<div class="input-group input-group-sm">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+							<input type="text" class="form-control" placeholder="">
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<img src="https://assets.backlog.jp/R20151111/images/common/logo_mark.png" width="20" height="20" alt="">
+						<span>プロジェクト1</span>
+					</a>
+					<ul class="list-inline">
+						<li><a href="#"><span>課題の検索</span></a></li>
+						<li><a href="#"><span>課題の追加</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="#">メンバー</a></li>
+		<li><a href="#">課題の検索</a></li>
+		<li>
+			<form class="navbar-form" role="search">
+				<div class="form-group">
+					<label class="sr-only" for="全体からキーワード検索">全体からキーワード検索</label>
+					<div class="input-group input-group-sm">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+						<input type="text" class="form-control" placeholder="全体からキーワード検索">
+					</div>
+				</div>
+			</form>
+		</li>
+	</ul>
+</nav>
+
+
+<header class="global-header page-header container-fluid row">
+	<div class="col-sm-8 clearfix">
+		<div class="pull-left">
+			<a href="#">
+				<img src="https://assets.backlog.jp/R20151111/images/common/logo_mark.png" alt="logo">
+			</a>
+		</div>
+		<h1>ページタイトルが入ります。</h1>
+	</div>
+	<div class="col-sm-4 text-right">
+		<div>
+			<a href="#" title="◯◯◯◯さんのプロフィール"><img src="https://assets.backlog.jp/R20151111/icons/00_default.gif" alt=""></a>
+			<span>◯◯◯◯さん、こんにちは</span>
+		</div>
+		<nav>
+			<ul class="list-inline">
+				<li><a href="#">設定</a></li>
+				<li><a href="#">個人設定</a></li>
+				<li><a href="#" target="_blank">ヘルプ</a></li>
+				<li class="Last"><a href="#">ログアウト</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<main class="container-fluid row">
+	<div class="col-sm-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p class="panel-title">プロジェクト</p>
+			</div>
+			<div class="panel-body">Panel content</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p class="panel-title">自分の課題</p>
+			</div>
+			<div class="panel-body">Panel content</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<p class="panel-title">最近の更新</p>
+			</div>
+			<div class="panel-body">Panel content</div>
+		</div>
+	</div>
+</main>
+
+
+<footer class="global-footer container-fluid text-center">
+	<a href="#pagetop">このページの一番上へ</a>
+	<p><small>Backyard Copyright ©2015-2016 by <site><a href="#">Mizzz</a></site> All rights reserved.</small></p>
+</footer>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
