@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* ----------------------------------------
+
+---------------------------------------- */
+/* インラインのリストアイテムに区切り棒を挿入する */
+.list-delimiter {
+	> li {
+		border-left:1px solid $base-border-color;
+		&:first-child {
+			border-left: none;
+		}
+	}
+}
+
+/* インプット要素の幅を拡げる */
+.input-group-long {
+	width: 240px;
+}
+
+.seeall {
+	padding: 10px;
+	background-color: $base-highlight-color;
+}
+
+/* リストアイテムをパネル幅いっぱいに拡げる */
+.panel-body-list {
+	> ul {
+		> li {
+			> a {
+				display: block;
+				width: 100%;
+				padding: 5px 10px;
+				&:hover {
+					background-color: #eee;
+				}
+			}
+		}
+	}
+}
+
+/* リストアイテムにホバー時に表示するコンテンツを追加する */
+.list-hover-disp {
+	> li {
+		overflow: hidden;
+		height: 30px;
+		transition: height .3s ease .3s;
+		&:hover {
+			height:50px;
+		}
+		> ul {
+			margin-left: 30px;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* ----------------------------------------
+
+---------------------------------------- */
+/* インラインのリストアイテムに区切り棒を挿入する */
+.list-delimiter > li {
+  border-left: 1px solid #aaa; }
+  .list-delimiter > li:first-child {
+    border-left: none; }
+
+/* インプット要素の幅を拡げる */
+.input-group-long {
+  width: 240px; }
+
+.seeall {
+  padding: 10px;
+  background-color: #eee; }
+
+/* リストアイテムをパネル幅いっぱいに拡げる */
+.panel-body-list > ul > li > a {
+  display: block;
+  width: 100%;
+  padding: 5px 10px; }
+  .panel-body-list > ul > li > a:hover {
+    background-color: #eee; }
+
+/* リストアイテムにホバー時に表示するコンテンツを追加する */
+.list-hover-disp > li {
+  overflow: hidden;
+  height: 30px;
+  transition: height .3s ease .3s; }
+  .list-hover-disp > li:hover {
+    height: 50px; }
+  .list-hover-disp > li > ul {
+    margin-left: 30px; }
+
+/* ----------------------------------------
+	レイアウト
+---------------------------------------- */
+body {
+  margin-top: 60px; }
+
+.global-nav .dropdown-menu {
+  width: 240px;
+  padding: 5px;
+  background-color: #333; }
+  .global-nav .dropdown-menu a {
+    display: block;
+    width: 100%;
+    padding: 0;
+    color: #fff; }
+    .global-nav .dropdown-menu a:hover {
+      background-color: #eee;
+      color: #3c3c3c; }
+
+.global-header {
+  border-bottom-width: 5px; }
+  .global-header h1 {
+    margin-left: 70px;
+    font-size: 20px;
+    font-weight: bold; }
+
+.global-footer {
+  margin-top: 80px; }
+  .global-footer .global-footer__pagetop {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    background: #fff;
+    z-index: 1; }
+  .global-footer__copyright {
+    position: relative;
+    top: -1px;
+    padding: 10px;
+    border-top: 1px solid #aaa; }
+
+/*# sourceMappingURL=style.css.map */
