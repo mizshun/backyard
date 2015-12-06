@@ -28,4 +28,15 @@
 		padding: 10px;
 		background-color: #eee;
 	}
+	&__title {
+		display: block;
+	}
+	&__status {
+		color: $lightFontColor;
+	}
+	&__date {
+		> span {
+			color: $lightFontColor;
+		}
+	}
 }

@@ -4,14 +4,16 @@
 ---------------------------------------- */
 /* インプット要素の幅を拡げる */
 .input-group-long {
-  width: 240px; }
+  width: 240px;
+}
 
 /* ----------------------------------------
 	ドロップダウン
 ---------------------------------------- */
 /* ドロップダウンの幅を拡げる */
 .dropdown-menu-long {
-  width: 240px; }
+  width: 240px;
+}
 
 /* ----------------------------------------
 	ボタン
@@ -19,9 +21,11 @@
 /* 追加読み込みボタン */
 .seeall {
   padding: 10px;
-  background-color: #eee; }
-  .seeall:hover {
-    background-color: #e1e1e1; }
+  background-color: #eee;
+}
+.seeall:hover {
+  background-color: #e1e1e1;
+}
 
 /* ----------------------------------------
 	リスト
@@ -30,56 +34,69 @@
 .panel-body-list > ul > li > a {
   display: block;
   width: 100%;
-  padding: 5px 10px; }
-  .panel-body-list > ul > li > a:hover {
-    background-color: #eee; }
+  padding: 5px 10px;
+}
+.panel-body-list > ul > li > a:hover {
+  background-color: #eee;
+}
 
 /* インラインのリストアイテムに区切り棒を挿入する */
 .list-delimiter > li {
-  border-left: 1px solid #aaa; }
-  .list-delimiter > li:first-child {
-    border-left: none; }
+  border-left: 1px solid #aaa;
+}
+.list-delimiter > li:first-child {
+  border-left: none;
+}
 
 /* リストアイテムにホバー時に表示するコンテンツを追加する */
 .list-hover-disp > li {
   overflow: hidden;
   height: 30px;
-  transition: height .3s ease .3s; }
-  .list-hover-disp > li:hover {
-    height: 50px; }
-  .list-hover-disp > li > ul {
-    margin-left: 30px; }
+  transition: height .3s ease .3s;
+}
+.list-hover-disp > li:hover {
+  height: 50px;
+}
+.list-hover-disp > li > ul {
+  margin-left: 30px;
+}
 
 /* ----------------------------------------
 	テーブル
 ---------------------------------------- */
 .table-border-dotted > tbody > tr td {
-  border-top-style: dotted; }
+  border-top-style: dotted;
+}
 
 /* ----------------------------------------
 	レイアウト
 ---------------------------------------- */
 body {
   margin-top: 60px;
-  font-size: 13px; }
+  font-size: 12px;
+}
 
 /* ----------------------------------------
 	グローバルナビ
 ---------------------------------------- */
 .global-nav .dropdown-menu {
   padding: 5px;
-  background-color: #333; }
+  background-color: #333;
+}
 .global-nav .dropdown-menu-list {
   padding: 5px;
-  background-color: #333; }
-  .global-nav .dropdown-menu-list > li > a {
-    display: block;
-    width: 100%;
-    padding: 5px;
-    color: #fff; }
-    .global-nav .dropdown-menu-list > li > a:hover {
-      background-color: #eee;
-      color: #3c3c3c; }
+  background-color: #333;
+}
+.global-nav .dropdown-menu-list > li > a {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  color: #fff;
+}
+.global-nav .dropdown-menu-list > li > a:hover {
+  background-color: #eee;
+  color: #3c3c3c;
+}
 
 /* ----------------------------------------
 	グローバルヘッダー
@@ -87,51 +104,61 @@ body {
 .global-header {
   margin-bottom: 0;
   border-bottom-width: 5px;
-  font-size: 11px; }
-  .global-header__title {
-    margin-left: 70px;
-    font-size: 24px;
-    font-weight: bold; }
-  .global-header__personal {
-    margin-bottom: 10px; }
-    .global-header__personal img {
-      max-width: 32px;
-      height: auto; }
+  font-size: 11px;
+}
+.global-header__title {
+  margin-left: 70px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.global-header__personal {
+  margin-bottom: 10px;
+}
+.global-header__personal img {
+  max-width: 32px;
+  height: auto;
+}
 
 /* ----------------------------------------
 	プロジェクトナビ
 ---------------------------------------- */
 .project-nav .navbar-nav:first-child > li {
   min-width: 100px;
-  text-align: center; }
-  .project-nav .navbar-nav:first-child > li > a:hover {
-    background-color: #eee; }
+  text-align: center;
+}
+.project-nav .navbar-nav:first-child > li > a:hover {
+  background-color: #eee;
+}
 
 /* ----------------------------------------
 	メイン
 ---------------------------------------- */
 main {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 /* ----------------------------------------
 	グローバルフッター
 ---------------------------------------- */
 .global-footer {
-  margin-top: 80px; }
-  .global-footer .global-footer__pagetop {
-    position: relative;
-    display: inline-block;
-    padding: 10px 30px;
-    border: 1px solid #aaa;
-    border-bottom: none;
-    border-radius: 8px 8px 0 0;
-    background: #fff;
-    z-index: 1; }
-  .global-footer__copyright {
-    position: relative;
-    top: -1px;
-    padding: 10px;
-    border-top: 1px solid #aaa; }
+  margin-top: 80px;
+}
+.global-footer .global-footer__pagetop {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  border: 1px solid #aaa;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  background: #fff;
+  z-index: 1;
+}
+.global-footer__copyright {
+  position: relative;
+  top: -1px;
+  padding: 10px;
+  border-top: 1px solid #aaa;
+}
 
 /* ----------------------------------------
 	ページ固有スタイル
@@ -142,47 +169,71 @@ main {
   	ダッシュボード
   ---------------------------------------- */
   /**/
-  /* 最新の課題 */ }
-  .dashboard .mytask .panel-heading {
-    margin-bottom: 10px; }
-  .dashboard .mytask .nav-tabs > li {
-    margin-left: 5px;
-    margin-right: 5px; }
-  .dashboard .mytask table th:nth-of-type(1),
-  .dashboard .mytask table th:nth-of-type(5) {
-    width: 15%; }
-  .dashboard .mytask table th:nth-of-type(2) {
-    width: 55%; }
-  .dashboard .recent-update__item {
-    padding: 10px 0;
-    border-top: 1px dotted #aaa; }
-    .dashboard .recent-update__item:first-child {
-      padding-top: 0;
-      border-top: none; }
-    .dashboard .recent-update__item img {
-      max-width: 48px;
-      height: auto; }
+  /* 最新の課題 */
+}
+.dashboard .mytask .panel-heading {
+  margin-bottom: 10px;
+}
+.dashboard .mytask .nav-tabs > li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.dashboard .mytask table th:nth-of-type(1),
+.dashboard .mytask table th:nth-of-type(5) {
+  width: 15%;
+}
+.dashboard .mytask table th:nth-of-type(2) {
+  width: 55%;
+}
+.dashboard .recent-update__item {
+  padding: 10px 0;
+  border-top: 1px dotted #aaa;
+}
+.dashboard .recent-update__item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+.dashboard .recent-update__item img {
+  max-width: 48px;
+  height: auto;
+}
 
 /* プロジェクトホーム */
 .projects {
   /* ----------------------------------------
   	プロジェクトホーム
-  ---------------------------------------- */ }
-  .projects .tasklist__date-block table thead {
-    display: none; }
-  .projects .tasklist__date-block table td {
-    width: 10%; }
-  .projects .tasklist__date-block table td:nth-of-type(3) {
-    width: 15%; }
-  .projects .tasklist__date-block table td:nth-of-type(4) {
-    width: 55%; }
-  .projects .tasklist__date-block table img {
-    width: 26px;
-    height: auto;
-    margin-right: 5px; }
-  .projects .tasklist__header {
-    margin-bottom: 0;
-    padding: 10px;
-    background-color: #eee; }
+  ---------------------------------------- */
+}
+.projects .tasklist__date-block table thead {
+  display: none;
+}
+.projects .tasklist__date-block table td {
+  width: 10%;
+}
+.projects .tasklist__date-block table td:nth-of-type(3) {
+  width: 15%;
+}
+.projects .tasklist__date-block table td:nth-of-type(4) {
+  width: 55%;
+}
+.projects .tasklist__date-block table img {
+  width: 26px;
+  height: auto;
+  margin-right: 5px;
+}
+.projects .tasklist__header {
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: #eee;
+}
+.projects .tasklist__title {
+  display: block;
+}
+.projects .tasklist__status {
+  color: #888;
+}
+.projects .tasklist__date > span {
+  color: #888;
+}
 
 /*# sourceMappingURL=style.css.map */
