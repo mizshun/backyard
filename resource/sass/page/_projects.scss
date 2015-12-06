@@ -1,0 +1,31 @@
+/* ----------------------------------------
+	プロジェクトホーム
+---------------------------------------- */
+.tasklist {
+	&__date-block {
+		table {
+			thead {
+				display: none;
+			}
+			td {
+				width: 10%;
+			}
+			td:nth-of-type(3) {
+				width: 15%;
+			}
+			td:nth-of-type(4) {
+				width: 55%;
+			}
+			img {
+				width: 26px;
+				height: auto;
+				margin-right: 5px;
+			}
+		}
+	}
+	&__header {
+		margin-bottom: 0;
+		padding: 10px;
+		background-color: #eee;
+	}
+}

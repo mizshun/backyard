@@ -60,7 +60,8 @@
 	レイアウト
 ---------------------------------------- */
 body {
-  margin-top: 60px; }
+  margin-top: 60px;
+  font-size: 13px; }
 
 /* ----------------------------------------
 	グローバルナビ
@@ -84,8 +85,9 @@ body {
 	グローバルヘッダー
 ---------------------------------------- */
 .global-header {
+  margin-bottom: 0;
   border-bottom-width: 5px;
-  font-size: 12px; }
+  font-size: 11px; }
   .global-header__title {
     margin-left: 70px;
     font-size: 24px;
@@ -95,6 +97,21 @@ body {
     .global-header__personal img {
       max-width: 32px;
       height: auto; }
+
+/* ----------------------------------------
+	プロジェクトナビ
+---------------------------------------- */
+.project-nav .navbar-nav:first-child > li {
+  min-width: 100px;
+  text-align: center; }
+  .project-nav .navbar-nav:first-child > li > a:hover {
+    background-color: #eee; }
+
+/* ----------------------------------------
+	メイン
+---------------------------------------- */
+main {
+  margin-top: 20px; }
 
 /* ----------------------------------------
 	グローバルフッター
@@ -119,6 +136,7 @@ body {
 /* ----------------------------------------
 	ページ固有スタイル
 ---------------------------------------- */
+/* ダッシュボード */
 .dashboard {
   /* ----------------------------------------
   	ダッシュボード
@@ -144,5 +162,27 @@ body {
     .dashboard .recent-update__item img {
       max-width: 48px;
       height: auto; }
+
+/* プロジェクトホーム */
+.projects {
+  /* ----------------------------------------
+  	プロジェクトホーム
+  ---------------------------------------- */ }
+  .projects .tasklist__date-block table thead {
+    display: none; }
+  .projects .tasklist__date-block table td {
+    width: 10%; }
+  .projects .tasklist__date-block table td:nth-of-type(3) {
+    width: 15%; }
+  .projects .tasklist__date-block table td:nth-of-type(4) {
+    width: 55%; }
+  .projects .tasklist__date-block table img {
+    width: 26px;
+    height: auto;
+    margin-right: 5px; }
+  .projects .tasklist__header {
+    margin-bottom: 0;
+    padding: 10px;
+    background-color: #eee; }
 
 /*# sourceMappingURL=style.css.map */

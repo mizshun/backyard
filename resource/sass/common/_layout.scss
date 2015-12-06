@@ -5,6 +5,7 @@
 ---------------------------------------- */
 body {
 	margin-top: 60px;
+	font-size: $baseFontSize;
 }
 
 /* ----------------------------------------
@@ -37,6 +38,7 @@ body {
 	グローバルヘッダー
 ---------------------------------------- */
 .global-header {
+	margin-bottom: 0;
 	border-bottom-width: 5px;
 	font-size: $smallFontSize;
 	&__banner {
@@ -53,6 +55,32 @@ body {
 			height: auto;
 		}
 	}
+}
+
+/* ----------------------------------------
+	プロジェクトナビ
+---------------------------------------- */
+.project-nav {
+	.navbar-nav {
+		&:first-child{
+			> li {
+				min-width: 100px;
+				text-align: center;
+				> a {
+					&:hover {
+						background-color: $base-highlight-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------
+	メイン
+---------------------------------------- */
+main {
+	margin-top: 20px;
 }
 
 /* ----------------------------------------

@@ -119,6 +119,7 @@
 		</div>
 		<h1 class="global-header__title">mizzz</h1>
 	</div>
+
 	<div class="col-lg-4 text-right">
 		<div class="global-header__personal">
 			<a href="#" title="◯◯◯◯さんのプロフィール"><img src="resource/image/common/office-worker2.png" alt=""></a>
@@ -136,8 +137,100 @@
 </header>
 
 
-<main class="container-fluid row">
+<nav class="project-nav navbar navbar-default">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">Link</a></li>
+			<li><a href="#">Link</a></li>
+		</ul>
 
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<form class="search-keyword navbar-form" role="search">
+					<div class="form-group">
+						<label class="sr-only" for="課題を検索">課題を検索</label>
+						<div class="input-group input-group-sm input-group-long">
+							<input type="text" class="form-control" placeholder="課題を検索">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+					</div>
+				</form>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+
+<main class="projects container-fluid row">
+	<section class="main-primary col-lg-8">
+		<h3 class="main-header">プロジェクトホーム</h3>
+
+		<div class="tasklist">
+			<section class="tasklist__date-block">
+				<h4 class="tasklist__header"><time datetime="2015-12-6">2015年12月6日(日)</time></h4>
+				<table class="table table-striped table-hover table-border-dotted">
+					<thead>
+						<tr>
+							<th><a>状態</a></th>
+							<th><a>キー</a></th>
+							<th><a>作成者</a></th>
+							<th><a>内容</a></th>
+							<th><a>更新日</a></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="label label-success">処理済み</span></td>
+							<td>project-1</td>
+							<td>
+								<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+							</td>
+							<td>長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。</td>
+							<td><time datetime="2015-07-31T19:13">4時間前<br>19:13</time></td>
+						</tr>
+						<tr>
+							<td><span class="label label-info">更新</span></td>
+							<td>project-1</td>
+							<td>
+								<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+							</td>
+							<td>長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。</td>
+							<td><time datetime="2015-07-31T19:13">4時間前<br>19:13</time></td>
+						</tr>
+						<tr>
+							<td><span class="label label-danger">課題</span></td>
+							<td>project-1</td>
+							<td>
+								<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+							</td>
+							<td>長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。</td>
+							<td><time datetime="2015-07-31T19:13">4時間前<br>19:13</time></td>
+						</tr>
+					</tbody>
+				</table>
+			</section><!-- /tasklist__date-block -->
+		</div>
+
+
+	</section>
+
+	<aside class="main-secondary col-lg-4">
+		<div class="recent-update panel panel-default">
+			<div class="panel-heading">
+				<p class="panel-title">状態</p>
+			</div>
+			<div class="panel-body">
+				<ul class="recent-update__items list-unstyled">
+					<li class="recent-update__item">
+						Code
+					</li>
+				</ul>
+			</div>
+		</div><!-- /最近の更新 -->
+	</aside>
 </main>
 
 
