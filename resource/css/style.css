@@ -1,21 +1,31 @@
 @charset "UTF-8";
 /* ----------------------------------------
-
+	フォーム
 ---------------------------------------- */
-/* インラインのリストアイテムに区切り棒を挿入する */
-.list-delimiter > li {
-  border-left: 1px solid #aaa; }
-  .list-delimiter > li:first-child {
-    border-left: none; }
-
 /* インプット要素の幅を拡げる */
 .input-group-long {
   width: 240px; }
 
+/* ----------------------------------------
+	ドロップダウン
+---------------------------------------- */
+/* ドロップダウンの幅を拡げる */
+.dropdown-menu-long {
+  width: 240px; }
+
+/* ----------------------------------------
+	ボタン
+---------------------------------------- */
+/* 追加読み込みボタン */
 .seeall {
   padding: 10px;
   background-color: #eee; }
+  .seeall:hover {
+    background-color: #e1e1e1; }
 
+/* ----------------------------------------
+	リスト
+---------------------------------------- */
 /* リストアイテムをパネル幅いっぱいに拡げる */
 .panel-body-list > ul > li > a {
   display: block;
@@ -23,6 +33,12 @@
   padding: 5px 10px; }
   .panel-body-list > ul > li > a:hover {
     background-color: #eee; }
+
+/* インラインのリストアイテムに区切り棒を挿入する */
+.list-delimiter > li {
+  border-left: 1px solid #aaa; }
+  .list-delimiter > li:first-child {
+    border-left: none; }
 
 /* リストアイテムにホバー時に表示するコンテンツを追加する */
 .list-hover-disp > li {
@@ -40,26 +56,43 @@
 body {
   margin-top: 60px; }
 
+/* ----------------------------------------
+	グローバルナビ
+---------------------------------------- */
 .global-nav .dropdown-menu {
-  width: 240px;
   padding: 5px;
   background-color: #333; }
-  .global-nav .dropdown-menu a {
+.global-nav .dropdown-menu-list {
+  padding: 5px;
+  background-color: #333; }
+  .global-nav .dropdown-menu-list > li > a {
     display: block;
     width: 100%;
-    padding: 0;
+    padding: 5px;
     color: #fff; }
-    .global-nav .dropdown-menu a:hover {
+    .global-nav .dropdown-menu-list > li > a:hover {
       background-color: #eee;
       color: #3c3c3c; }
 
+/* ----------------------------------------
+	グローバルヘッダー
+---------------------------------------- */
 .global-header {
-  border-bottom-width: 5px; }
-  .global-header h1 {
+  border-bottom-width: 5px;
+  font-size: 12px; }
+  .global-header__title {
     margin-left: 70px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold; }
+  .global-header__personal {
+    margin-bottom: 10px; }
+    .global-header__personal img {
+      max-width: 32px;
+      height: auto; }
 
+/* ----------------------------------------
+	グローバルフッター
+---------------------------------------- */
 .global-footer {
   margin-top: 80px; }
   .global-footer .global-footer__pagetop {
@@ -76,5 +109,23 @@ body {
     top: -1px;
     padding: 10px;
     border-top: 1px solid #aaa; }
+
+/* ----------------------------------------
+	ページ固有スタイル
+---------------------------------------- */
+.dashboard {
+  /* ----------------------------------------
+  	ダッシュボード
+  ---------------------------------------- */
+  /**/
+  /* 最新の課題 */ }
+  .dashboard .mytask .panel-heading {
+    margin-bottom: 10px; }
+  .dashboard .mytask .nav-tabs > li {
+    margin-left: 5px;
+    margin-right: 5px; }
+  .dashboard .recent-update__item img {
+    max-width: 48px;
+    height: auto; }
 
 /*# sourceMappingURL=style.css.map */

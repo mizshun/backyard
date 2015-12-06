@@ -1,0 +1,26 @@
+/* ----------------------------------------
+	ダッシュボード
+---------------------------------------- */
+
+/**/
+.mytask {
+	.panel-heading {
+		margin-bottom: 10px;
+	}
+	.nav-tabs {
+		> li {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	}
+}
+
+/* 最新の課題 */
+.recent-update {
+	&__item {
+		img {
+			max-width: 48px;
+			height: auto;
+		}
+	}
+}

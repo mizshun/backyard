@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* ----------------------------------------
+	フォーム
+---------------------------------------- */
+/* インプット要素の幅を拡げる */
+.input-group-long {
+	width: 240px;
+}
+
+/* ----------------------------------------
+	ドロップダウン
+---------------------------------------- */
+/* ドロップダウンの幅を拡げる */
+.dropdown-menu-long {
+	width: 240px;
+}
+
+/* ----------------------------------------
+	ボタン
+---------------------------------------- */
+/* 追加読み込みボタン */
+.seeall {
+	padding: 10px;
+	background-color: $base-highlight-color;
+	&:hover {
+		background-color: darken($base-highlight-color, 5%);
+	}
+}
+
+/* ----------------------------------------
+	リスト
+---------------------------------------- */
+/* リストアイテムをパネル幅いっぱいに拡げる */
+.panel-body-list {
+	> ul {
+		> li {
+			> a {
+				display: block;
+				width: 100%;
+				padding: 5px 10px;
+				&:hover {
+					background-color: $base-highlight-color;
+				}
+			}
+		}
+	}
+}
+
+/* インラインのリストアイテムに区切り棒を挿入する */
+.list-delimiter {
+	> li {
+		border-left:1px solid $base-border-color;
+		&:first-child {
+			border-left: none;
+		}
+	}
+}
+
+/* リストアイテムにホバー時に表示するコンテンツを追加する */
+.list-hover-disp {
+	> li {
+		overflow: hidden;
+		height: 30px;
+		transition: height .3s ease .3s;
+		&:hover {
+			height:50px;
+		}
+		> ul {
+			margin-left: 30px;
+		}
+	}
+}
