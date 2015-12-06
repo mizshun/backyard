@@ -32,10 +32,10 @@ $base-border-color: #aaa;
 // フォントファミリー
 $baseFontFamily: "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", sans-serif;
 // フォントサイズ
-$baseFontSize: 13px;
+$baseFontSize: 12px;
 $smallFontSize: 11px;
 // フォントカラー
-$baseFontColor: #666;
+$lightFontColor: #888;
 // 行間
 $baseLineHeight: 1.5;
 // 強調カラー
@@ -44,7 +44,7 @@ $highlightFontColor: #fc0;
 // -------------------------------
 // リンク
 // -------------------------------
-$baseLink : $baseFontColor; // リンクカラー
-$baseLinkV: $baseFontColor; // 同ヴィジテッド
-$baseLinkH: $baseFontColor; // 同ホバー
-$baseLinkA: $baseFontColor; // 同アクティブ
+//$baseLink : $baseFontColor; // リンクカラー
+//$baseLinkV: $baseFontColor; // 同ヴィジテッド
+//$baseLinkH: $baseFontColor; // 同ホバー
+//$baseLinkA: $baseFontColor; // 同アクティブ
