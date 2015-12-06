@@ -51,6 +51,12 @@
     margin-left: 30px; }
 
 /* ----------------------------------------
+	テーブル
+---------------------------------------- */
+.table-border-dotted > tbody > tr td {
+  border-top-style: dotted; }
+
+/* ----------------------------------------
 	レイアウト
 ---------------------------------------- */
 body {
@@ -124,8 +130,19 @@ body {
   .dashboard .mytask .nav-tabs > li {
     margin-left: 5px;
     margin-right: 5px; }
-  .dashboard .recent-update__item img {
-    max-width: 48px;
-    height: auto; }
+  .dashboard .mytask table th:nth-of-type(1),
+  .dashboard .mytask table th:nth-of-type(5) {
+    width: 15%; }
+  .dashboard .mytask table th:nth-of-type(2) {
+    width: 55%; }
+  .dashboard .recent-update__item {
+    padding: 10px 0;
+    border-top: 1px dotted #aaa; }
+    .dashboard .recent-update__item:first-child {
+      padding-top: 0;
+      border-top: none; }
+    .dashboard .recent-update__item img {
+      max-width: 48px;
+      height: auto; }
 
 /*# sourceMappingURL=style.css.map */
