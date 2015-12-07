@@ -110,29 +110,29 @@
 	</ul>
 </nav>
 
-<header class="global-header page-header container-fluid row">
-	<div class="col-sm-8 clearfix">
-		<div class="global-header__banner pull-left">
-			<a href="#">
-				<img src="resource/image/common/60x60.png" alt="logo">
-			</a>
+<header class="global-header page-header container-fluid">
+	<div class="row">
+		<div class="col-sm-8 clearfix">
+			<div class="global-header__banner">
+				<a href="#"><img src="resource/image/common/60x60.png" alt="logo"></a>
+			</div>
+			<h1 class="global-header__title">mizzz</h1>
 		</div>
-		<h1 class="global-header__title">mizzz</h1>
-	</div>
 
-	<div class="col-sm-4 text-right">
-		<div class="global-header__personal">
-			<a href="#" title="◯◯◯◯さんのプロフィール"><img src="resource/image/common/office-worker2.png" alt=""></a>
-			<span>◯◯◯◯さん、こんにちは</span>
+		<div class="col-sm-4 text-right">
+			<div class="global-header__personal">
+				<a href="#" title="◯◯◯◯さんのプロフィール"><img src="resource/image/common/office-worker2.png" alt=""></a>
+				<span>◯◯◯◯さん、こんにちは</span>
+			</div>
+			<nav class="global-header__sub-nuv">
+				<ul class="list-inline list-delimiter">
+					<li><a href="#">プロジェクト設定</a></li>
+					<li><a href="#">個人設定</a></li>
+					<li><a href="#" target="_blank">ヘルプ</a></li>
+					<li><a href="#">ログアウト</a></li>
+				</ul>
+			</nav>
 		</div>
-		<nav class="global-header__sub-nuv">
-			<ul class="list-inline list-delimiter">
-				<li><a href="#">プロジェクト設定</a></li>
-				<li><a href="#">個人設定</a></li>
-				<li><a href="#" target="_blank">ヘルプ</a></li>
-				<li><a href="#">ログアウト</a></li>
-			</ul>
-		</nav>
 	</div>
 </header>
 
@@ -140,9 +140,9 @@
 <nav class="project-nav navbar navbar-default">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">課題の検索</a></li>
+			<li><a href="#">課題の追加</a></li>
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
@@ -164,83 +164,263 @@
 </nav>
 
 
-<main class="projects container-fluid row">
-	<section class="main-primary col-sm-9">
-		<h3 class="main-header">プロジェクトホーム</h3>
+<main class="projects container-fluid">
+	<div class="row">
+		<section class="primary col-sm-9">
+			<h2 class="main-header">プロジェクトホーム</h2>
+			<div class="tasklist">
+				<div class="tasklist__controler clearfix">
+					<p class="pull-left">最新の50件</p>
+					<ul class="list-inline list-delimiter pull-right">
+						<li>表示件数 : 50</li>
+						<li>表示対象 : 全て</li>
+						<li><a href="javascript:void(0);">表示設定</a></li>
+					</ul>
+				</div>
 
-		<div class="tasklist">
-			<section class="tasklist__date-block">
-				<h4 class="tasklist__header"><time datetime="2015-12-6">2015年12月6日(日)</time></h4>
-				<table class="table table-striped table-hover table-border-dotted">
-					<thead>
-						<tr>
-							<th><a>状態</a></th>
-							<th><a>キー</a></th>
-							<th><a>作成者</a></th>
-							<th><a>内容</a></th>
-							<th><a>更新日</a></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><span class="label label-success">処理済み</span></td>
-							<td>project-1</td>
-							<td>
-								<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
-							</td>
-							<td>
-								<span class="tasklist__title">課題1</span>
-								<span class="tasklist__status">[ 状態: 完了 ]</span>
-							</td>
-							<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
-						</tr>
-						<tr>
-							<td><span class="label label-info">更新</span></td>
-							<td>project-1</td>
-							<td>
-								<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
-							</td>
-							<td>
-								<span class="tasklist__title">課題1</span>
-								長い課題名の場合はこのような表示になります。
-								<span class="tasklist__status">[ 状態: 完了 ]</span>
-							</td>
-							<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
-						</tr>
-						<tr>
-							<td><span class="label label-danger">課題</span></td>
-							<td>project-1</td>
-							<td>
-								<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
-							</td>
-							<td>
-								<span class="tasklist__title">課題1</span>
-								長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。
-							</td>
-							<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
-						</tr>
-					</tbody>
-				</table>
-			</section><!-- /tasklist__date-block -->
+				<section class="tasklist__date-block">
+					<h3 class="tasklist__header"><time datetime="2015-12-6">2015年12月6日(日)</time></h3>
+					<table class="table table-striped table-hover table-border-dotted">
+						<thead>
+							<tr>
+								<th><a>状態</a></th>
+								<th><a>キー</a></th>
+								<th><a>作成者</a></th>
+								<th><a>内容</a></th>
+								<th><a>更新日</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="label label-info">更新</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									<span class="tasklist__status">[ 状態: 完了 ]</span>
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-info">更新</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。
+									<span class="tasklist__status">[ 状態: 完了 ]</span>
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-danger">課題</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-success">コメント</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+						</tbody>
+					</table>
+				</section><!-- /tasklist__date-block -->
+
+				<section class="tasklist__date-block">
+					<h3 class="tasklist__header"><time datetime="2015-12-6">2015年12月6日(日)</time></h3>
+					<table class="table table-striped table-hover table-border-dotted">
+						<thead>
+							<tr>
+								<th><a>状態</a></th>
+								<th><a>キー</a></th>
+								<th><a>作成者</a></th>
+								<th><a>内容</a></th>
+								<th><a>更新日</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="label label-info">更新</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									<span class="tasklist__status">[ 状態: 完了 ]</span>
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-info">更新</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。
+									<span class="tasklist__status">[ 状態: 完了 ]</span>
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-danger">課題</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-success">コメント</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+						</tbody>
+					</table>
+				</section><!-- /tasklist__date-block -->
+
+				<section class="tasklist__date-block">
+					<h3 class="tasklist__header"><time datetime="2015-12-6">2015年12月6日(日)</time></h3>
+					<table class="table table-striped table-hover table-border-dotted">
+						<thead>
+							<tr>
+								<th><a>状態</a></th>
+								<th><a>キー</a></th>
+								<th><a>作成者</a></th>
+								<th><a>内容</a></th>
+								<th><a>更新日</a></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="label label-info">更新</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									<span class="tasklist__status">[ 状態: 完了 ]</span>
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-info">更新</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。
+									<span class="tasklist__status">[ 状態: 完了 ]</span>
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-danger">課題</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+							<tr>
+								<td><span class="label label-success">コメント</span></td>
+								<td>project-1</td>
+								<td>
+									<a href="#"><img src="resource/image/common/office-worker2.png">◯◯◯◯</a>
+								</td>
+								<td>
+									<span class="tasklist__title">課題1</span>
+									長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。長い課題名の場合はこのような表示になります。
+								</td>
+								<td><time datetime="2015-07-31T19:13" class="tasklist__date">4時間前<br><span>19:13</span></time></td>
+							</tr>
+						</tbody>
+					</table>
+				</section><!-- /tasklist__date-block -->
+			</div>
+		</section>
+
+		<div class="secondary col-sm-3">
+			<aside class="status">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">状態</h3>
+					</div>
+					<div class="panel-body">
+						<div class="graph">
+							<img src="https://assets.backlog.jp/R20151111/images/common/graph_green01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_lightgreen01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_orange01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_red01.gif" style="width:25%" height="16" alt="">
+							<div class="graph__counter">(0/1110)</div>
+						</div>
+						<ul class="list-inline list-delimiter">
+							<li><a href="#">未対応<span>(0)</span></a></li>
+							<li><a href="#">処理中</a><span>(10)</span></li>
+							<li><a href="#">処理済み</a><span>(100)</span></li>
+							<li><a href="#">完了</a><span>(1000)</span></li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+
+			<aside class="category">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">カテゴリー</h3>
+					</div>
+					<div class="panel-body">
+						<p class="text-right"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;<a href="#">カテゴリーの編集</a></p>
+						<div class="graph">
+							<h4 class="graph__header">ヘッダー</h4>
+							<img src="https://assets.backlog.jp/R20151111/images/common/graph_green01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_lightgreen01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_orange01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_red01.gif" style="width:25%" height="16" alt="">
+							<div class="graph__counter">(0/1110)</div>
+						</div>
+						<div class="graph">
+							<h4 class="graph__header">未設定</h4>
+							<img src="https://assets.backlog.jp/R20151111/images/common/graph_green01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_lightgreen01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_orange01.gif" style="width:25%" height="16" alt=""><img src="https://assets.backlog.jp/R20151111/images/common/graph_red01.gif" style="width:25%" height="16" alt="">
+							<div class="graph__counter">(0/1110)</div>
+						</div>
+					</div>
+				</div>
+			</aside>
 		</div>
-
-
-	</section>
-
-	<aside class="main-secondary col-sm-3">
-		<div class="recent-update panel panel-default">
-			<div class="panel-heading">
-				<p class="panel-title">状態</p>
-			</div>
-			<div class="panel-body">
-				<ul class="recent-update__items list-unstyled">
-					<li class="recent-update__item">
-						Code
-					</li>
-				</ul>
-			</div>
-		</div><!-- /最近の更新 -->
-	</aside>
+	</div>
 </main>
 
 
@@ -261,6 +441,44 @@
 <script>window.Backbone||document.write("<script type='text/javascript' src='resource/js/lib/backbone-1.2.3.min.js'>\x3C/script>")</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!-- /JavaScript -->
+
+
+
+<div id="latestUpdateSettingPopupDialogElement" class="panel panel-default hidden">
+	<p class="panel-heading">表示設定</p>
+	<div class="popup_content">
+		<!-- <form id="latestUpdateSettingPopupDialogForm" name="ChangeLastUpdatedNumAndType" action="/ChangeLastUpdatedNumAndType.action" method="post"> -->
+		<form id="" name="" action="/projects.html" method="get">
+			<table>
+				<tbody>
+				<tr>
+					<td>表示件数:</td>
+					<td>
+						<input id="last-updated-num-50" type="radio" name="last-updated-num" value="50" checked>
+						<label for="last-updated-num-50">50</label>
+						<input id="last-updated-num-100" type="radio" name="last-updated-num" value="100">
+						<label for="last-updated-num-100">100</label>
+						<input id="last-updated-num-200" type="radio" name="last-updated-num" value="200">
+						<label for="last-updated-num-200">200</label>
+					</td>
+				</tr>
+				<tr>
+					<td>表示対象:</td>
+					<td>
+						<input id="enable-types-0" type="checkbox" name="enable-types" value="0" checked>
+						<label for="enable-types-0">課題</label><br>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<p class="popup_close">
+				<input type="submit" class="submitbtn Btn-gray" value="反映する">
+				<a id="latestUpdateSettingPopupDialogCloseButton" class="close-link" href="javascript:void(0);">キャンセル</a>
+			</p>
+		</form>
+		ここで設定した内容はブラウザのクッキーに保存されます。次回表示時も有効です。
+	</div>
+</div>
 
 
 </body>

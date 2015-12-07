@@ -85,3 +85,18 @@
 		}
 	}
 }
+
+/* ----------------------------------------
+	グラフ
+---------------------------------------- */
+.graph {
+	&__header {
+		margin-bottom: 10px;
+		padding: 5px;
+		background-color: #eee;
+		font-size: $baseFontSize;
+	}
+	&__counter {
+		padding: 5px 0;
+	}
+}

@@ -5,6 +5,7 @@
 .tasklist {
 	&__date-block {
 		table {
+			border-bottom: 1px dotted #ddd;
 			thead {
 				display: none;
 			}
@@ -27,7 +28,8 @@
 	&__header {
 		margin-bottom: 0;
 		padding: 10px;
-		background-color: #eee;
+		background-color: $theme-color !important;
+		font-size: 16px;
 	}
 	&__title {
 		display: block;
@@ -38,6 +40,16 @@
 	&__date {
 		> span {
 			color: $lightFontColor;
+		}
+	}
+}
+
+/* カテゴリー */
+.category {
+	.graph {
+		margin-top: 10px;
+		&:first-child {
+			margin-top: 0;
 		}
 	}
 }

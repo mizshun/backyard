@@ -69,6 +69,33 @@
 }
 
 /* ----------------------------------------
+	グラフ
+---------------------------------------- */
+.graph__header {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #eee;
+  font-size: 12px;
+}
+.graph__counter {
+  padding: 5px 0;
+}
+
+/* ----------------------------------------
+	リセット
+---------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------------------------------------
 	レイアウト
 ---------------------------------------- */
 body {
@@ -104,12 +131,17 @@ body {
 .global-header {
   margin-bottom: 0;
   border-bottom-width: 5px;
-  font-size: 11px;
+  font-size: 12px;
+}
+.global-header__banner {
+  display: inline-block;
 }
 .global-header__title {
-  margin-left: 70px;
+  display: inline-block;
+  margin-left: 10px;
   font-size: 24px;
   font-weight: bold;
+  vertical-align: middle;
 }
 .global-header__personal {
   margin-bottom: 10px;
@@ -133,10 +165,19 @@ body {
 /* ----------------------------------------
 	メイン
 ---------------------------------------- */
+/* メインラッパー */
 main {
   margin-top: 20px;
 }
+main .main-header {
+  margin-bottom: 1em;
+  padding-bottom: .5em;
+  border-bottom: 1px dashed #aaa;
+  font-size: 20px;
+}
 
+/* メインコンテンツ */
+/* サブコンテンツ */
 /* ----------------------------------------
 	グローバルフッター
 ---------------------------------------- */
@@ -203,6 +244,11 @@ main {
   /* ----------------------------------------
   	プロジェクトホーム
   ---------------------------------------- */
+  /* 日別一覧表示 */
+  /* カテゴリー */
+}
+.projects .tasklist__date-block table {
+  border-bottom: 1px dotted #ddd;
 }
 .projects .tasklist__date-block table thead {
   display: none;
@@ -224,7 +270,8 @@ main {
 .projects .tasklist__header {
   margin-bottom: 0;
   padding: 10px;
-  background-color: #eee;
+  background-color: #eee !important;
+  font-size: 16px;
 }
 .projects .tasklist__title {
   display: block;
@@ -234,6 +281,12 @@ main {
 }
 .projects .tasklist__date > span {
   color: #888;
+}
+.projects .category .graph {
+  margin-top: 10px;
+}
+.projects .category .graph:first-child {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

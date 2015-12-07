@@ -1,6 +1,21 @@
 @charset "utf-8";
 
 /* ----------------------------------------
+	リセット
+---------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ----------------------------------------
 	レイアウト
 ---------------------------------------- */
 body {
@@ -40,13 +55,17 @@ body {
 .global-header {
 	margin-bottom: 0;
 	border-bottom-width: 5px;
-	font-size: $smallFontSize;
+	font-size: $baseFontSize;
 	&__banner {
+		display: inline-block;
 	}
 	&__title {
-		margin-left: 70px;
+		display: inline-block;
+		margin-left: 10px;
 		font-size: 24px;
 		font-weight: bold;
+		vertical-align: middle;
+
 	}
 	&__personal {
 		margin-bottom: 10px;
@@ -79,8 +98,23 @@ body {
 /* ----------------------------------------
 	メイン
 ---------------------------------------- */
+/* メインラッパー */
 main {
 	margin-top: 20px;
+	.main-header {
+		margin-bottom: 1em;
+		padding-bottom: .5em;
+		border-bottom: 1px dashed $base-border-color;
+		font-size: $headingFontSize;
+	}
+}
+
+/* メインコンテンツ */
+.primary {
+}
+
+/* サブコンテンツ */
+.secondary {
 }
 
 /* ----------------------------------------

@@ -1,45 +1,22 @@
 @charset "utf-8";
 
 // -------------------------------
-// パス
-// -------------------------------
-// 画像パス
-$imgPath: "../img/";
-
-// -------------------------------
-// レイアウト
-// -------------------------------
-$baseWidth: 100%;
-$baseHeight: 100%;
-$baseSpace: 8px;
-
-// -------------------------------
 // カラー
 // -------------------------------
-// ベースカラー :70%
-$baseColor: #fff;
-// メインカラー :25%
-$mainColor : #eee;
-// アクセントカラー :5%
-$keyColor : #333;
-
 $base-highlight-color: #eee;
 $base-border-color: #aaa;
 
 // -------------------------------
 // フォント
 // -------------------------------
-// フォントファミリー
-$baseFontFamily: "ヒラギノ角ゴ Pro W3", Meiryo, "メイリオ", sans-serif;
 // フォントサイズ
-$baseFontSize: 12px;
-$smallFontSize: 11px;
+$headingFontSize: 20px;
+$largeFontSize: 16px;
+$baseFontSize:  12px;
+$smallFontSize: 10px;
+
 // フォントカラー
 $lightFontColor: #888;
-// 行間
-$baseLineHeight: 1.5;
-// 強調カラー
-$highlightFontColor: #fc0;
 
 // -------------------------------
 // リンク
@@ -48,3 +25,8 @@ $highlightFontColor: #fc0;
 //$baseLinkV: $baseFontColor; // 同ヴィジテッド
 //$baseLinkH: $baseFontColor; // 同ホバー
 //$baseLinkA: $baseFontColor; // 同アクティブ
+
+// -------------------------------
+// テーマ用カラー
+// -------------------------------
+$theme-color: #eee;
