@@ -167,8 +167,8 @@
 
 <main class="task container-fluid">
 	<div class="row">
-		<section class="primary col-sm-9">
-			<h2 class="main-header">課題の表示</h2>
+		<div class="primary col-sm-9">
+			<h1 class="main-header">課題の表示</h1>
 			<nav class="task-nav text-right">
 				<ul class="list-inline list-delimiter">
 					<li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;編集</a></li>
@@ -188,7 +188,7 @@
 						<span class="task-card__date">登録日 : 2015/06/25 23:16:10</span>
 						<span class="task-card__due">期限日 : 2015/12/31</span>
 					</div>
-					<h3>課題テスト</h3>
+					<h2>課題テスト</h2>
 				</header>
 
 				<div class="task-card__attributes">
@@ -215,15 +215,42 @@
 							</tr>
   						</tbody>
 					</table>
-				</div>
-			</article>
-		</section>
+				</div><!-- /task-card__attributes -->
+
+				<section class="task-card__detail">
+					<header class="task-card__detail-header">
+						<h3>詳細</h3>
+						<div class="task-card__user">
+							<a href="#" title="◯◯◯◯"><img src="resource/image/common/office-worker2.png" alt=""></a>
+							<span>◯◯◯◯</span>
+						</div><!-- /task-card__user -->
+					</header><!-- /task-card__ -->
+					<p class="task-card__detail-body">これは課題テスト詳細の本文です。これは課題テスト詳細の本文です。</p>
+				</section><!-- /task-card__desc -->
+
+				<section class="task-card__attach">
+					<header class="task-card__attach-header">
+						<h3>添付ファイル<span>1</span>件</h3>
+					</header><!-- /task-card__attach-header -->
+					<ul class="task-card__attach-body list-unstyled">
+						<li>
+							<span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+							<a href="#">◯◯◯◯.png</a>
+							<span>(5.4 KB : 2015/06/28 15:08:43)</span>
+							<a href="#">ダウンロード</a>
+							<a href="#">削除</a>
+						</li>
+					</ul><!-- /task-card__attach-body -->
+				</section><!-- /task-card__attach -->
+
+			</article><!-- /task-card -->
+		</div>
 
 		<div class="secondary col-sm-3">
 			<aside class="update-status">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title">状態の変更</h3>
+						<h2 class="panel-title">状態の変更</h2>
 					</div>
 					<div class="panel-body">
 					</div>
@@ -233,7 +260,7 @@
 			<aside class="update-history">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						<h3 class="panel-title">変更履歴</h3>
+						<h2 class="panel-title">変更履歴</h2>
 					</div>
 					<div class="panel-body">
 					</div>
