@@ -289,4 +289,159 @@ main .main-header {
   margin-top: 0;
 }
 
+/* 課題の表示 */
+.task {
+  /* ----------------------------------------
+  	課題の表示
+  ---------------------------------------- */
+  /* 課題 */
+  /* コメント */
+  /* コメントの編集 */
+}
+.task .task-card > * + * {
+  margin-top: 15px;
+  padding: 15px 10px 0;
+  border-top: 1px solid #aaa;
+}
+.task .task-card__title {
+  margin-top: 15px;
+  padding: 15px 10px 0;
+  border-top: 1px solid #aaa;
+  font-size: 20px;
+}
+.task .task-card__attributes table {
+  width: 100%;
+}
+.task .task-card__attributes table th, .task .task-card__attributes table td {
+  width: 20%;
+  padding: 10px 0;
+}
+.task .task-card__attributes table th {
+  width: 10%;
+}
+.task .task-card__attributes table tr + tr th, .task .task-card__attributes table tr + tr td {
+  border-top: 1px dotted #aaa;
+}
+.task .task-card__detail-header > * {
+  display: inline-block;
+}
+.task .task-card__detail-title {
+  margin-right: 10px;
+  font-size: 16px;
+  vertical-align: top;
+}
+.task .task-card__detail-user img {
+  max-width: 32px;
+  height: auto;
+  margin-right: 5px;
+}
+.task .task-card__detail-body {
+  margin-top: 10px;
+  margin-left: 42px;
+}
+.task .task-card__attach-title {
+  font-size: 16px;
+}
+.task .task-card__attach-body {
+  margin-top: 10px;
+  margin-left: 42px;
+}
+.task .comment {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #aaa;
+}
+.task .comment__header {
+  padding: 10px;
+  background-color: #eee;
+}
+.task .comment__title {
+  font-size: 16px;
+}
+.task .comment__nav ul {
+  margin-bottom: 0;
+}
+.task .comment__control {
+  margin: 10px 0;
+  text-align: right;
+}
+.task .comment__item--minimum {
+  position: relative;
+  margin-top: 20px;
+  border-top: 1px solid #d4d4d4;
+  background-color: #eee;
+  text-align: center;
+}
+.task .comment__item--minimum > * {
+  display: block;
+  border-top: 1px solid #d4d4d4;
+  background-color: #eee;
+}
+.task .comment__item--minimum::before, .task .comment__item--minimum::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-top: 1px solid #d4d4d4;
+  background-color: #eee;
+}
+.task .comment__item--minimum::before {
+  top: -10px;
+  z-index: -1;
+}
+.task .comment__item--minimum::after {
+  top: -5px;
+  z-index: 1;
+}
+.task .comment__item--minimum-count {
+  position: relative;
+  padding: 5px 0;
+  z-index: 2;
+}
+.task .comment__item-header {
+  padding: 10px;
+  border-top: 2px solid #d4d4d4;
+  background-color: #eee;
+}
+.task .comment__item-header > * {
+  display: inline-block;
+}
+.task .comment__item-header > *:nth-child(1) {
+  width: 69%;
+}
+.task .comment__item-header > *:nth-child(1) > * {
+  display: inline;
+}
+.task .comment__item-header > *:nth-child(2) {
+  width: 30%;
+}
+.task .comment__item-header--overview {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.task .comment__item-header--overview > * {
+  display: inline;
+  width: auto;
+}
+.task .comment__item-title {
+  font-size: 16px;
+}
+.task .comment__item-user img {
+  max-width: 24px;
+  height: auto;
+}
+.task .comment__item-control {
+  margin-bottom: 0;
+  text-align: right;
+}
+.task .comment__item-body {
+  margin: 15px 30px 30px;
+}
+.task .input__title {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

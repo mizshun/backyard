@@ -35,11 +35,11 @@
 		display: block;
 	}
 	&__status {
-		color: $lightFontColor;
+		color: $light-font-color;
 	}
 	&__date {
 		> span {
-			color: $lightFontColor;
+			color: $light-font-color;
 		}
 	}
 }

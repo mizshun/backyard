@@ -1,0 +1,195 @@
+/* ----------------------------------------
+	課題の表示
+---------------------------------------- */
+/* 課題 */
+.task-card {
+	$vertical-space: 15px;
+
+	> * {
+		 + * {
+			margin-top: $vertical-space;
+			padding: $vertical-space 10px 0;
+			border-top: 1px solid $base-border-color;
+		}
+	}
+	// ヘッダー
+	&__title {
+		margin-top: $vertical-space;
+		padding: $vertical-space 10px 0;
+		border-top: 1px solid $base-border-color;
+		font-size: $heading-font-size;
+	}
+	// 属性
+	&__attributes {
+		table {
+			$column-space: 10px;
+			width: 100%;
+			th, td {
+				width: 20%;
+				padding: $column-space 0;
+			}
+			th {
+				width: 10%;
+			}
+			tr + tr {
+				th, td {
+					border-top: 1px dotted $base-border-color;
+				}
+			}
+			.spacer {
+
+			}
+		}
+	}
+	// 詳細
+	&__detail {
+		&-header {
+			> * {
+				display: inline-block;
+			}
+		}
+		&-title {
+			margin-right: 10px;
+			font-size: $large-font-size;
+			vertical-align: top;
+		}
+		&-user {
+			img {
+				max-width: $thumb-md;
+				height: auto;
+				margin-right: 5px;
+			}
+		}
+		&-body {
+			margin-top: 10px;
+			margin-left: 42px;
+		}
+	}
+	// 添付ファイル
+	&__attach {
+		&-title {
+			font-size: $large-font-size;
+		}
+		&-body {
+			margin-top: 10px;
+			margin-left: 42px;
+		}
+	}
+}
+
+/* コメント */
+.comment {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px dotted $base-border-color;
+	&__header {
+		padding: 10px;
+		background-color: $base-bg-color;
+	}
+	&__title {
+		font-size: $large-font-size;
+	}
+	&__nav {
+		ul {
+			margin-bottom: 0;
+		}
+	}
+	// コメントコントローラー
+	&__control {
+		margin: 10px 0;
+		text-align: right;
+	}
+	// 各コメント
+	&__item {
+		// 最小化コメント
+		&--minimum {
+			$border-width: 1px;
+			position: relative;
+			margin-top: 20px;
+			border-top: $border-width solid darken($base-bg-color, 10%);
+			background-color: $base-bg-color;
+			text-align: center;
+			> * {
+				display: block;
+				border-top: $border-width solid darken($base-bg-color, 10%);
+				background-color: $base-bg-color;
+			}
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 10px;
+				border-top: $border-width solid darken($base-bg-color, 10%);
+				background-color: $base-bg-color;
+			}
+			&::before {
+				top: -10px;
+				z-index: -1;
+			}
+			&::after {
+				top: -5px;
+				z-index: 1;
+			}
+			&-count {
+				position: relative;
+				padding: 5px 0;
+				z-index: 2;
+			}
+		}
+		// 見出し
+		&-header {
+			padding: 10px;
+			border-top: 2px solid darken($base-bg-color, 10%);
+			background-color: $base-bg-color;
+			> * {
+				display: inline-block;
+				&:nth-child(1) {
+					width: 69%;
+					> * {
+						display: inline;
+					}
+				}
+				&:nth-child(2) {
+					width: 30%;
+				}
+			}
+			// 非展開
+			&--overview {
+				overflow: hidden;
+				width: 100%;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				> * {
+					display: inline;
+					width: auto;
+				}
+			}
+		}
+		&-title {
+			font-size: $large-font-size;
+		}
+		&-user {
+			img {
+				max-width: $thumb-sm;
+				height: auto;
+			}
+		}
+		&-control {
+			margin-bottom: 0;
+			text-align: right;
+		}
+		// 内容
+		&-body {
+			margin: 15px 30px 30px;
+		}
+	}
+}
+
+/* コメントの編集 */
+.input {
+	&__title {
+		display: none;
+	}
+}

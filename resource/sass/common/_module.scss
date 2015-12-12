@@ -77,8 +77,8 @@
 	テーブル
 ---------------------------------------- */
 .table-border-dotted {
-	>tbody {
-		>tr {
+	> tbody {
+		> tr {
 			td {
 				border-top-style: dotted;
 			}
@@ -94,7 +94,7 @@
 		margin-bottom: 10px;
 		padding: 5px;
 		background-color: #eee;
-		font-size: $baseFontSize;
+		font-size: $base-font-size;
 	}
 	&__counter {
 		padding: 5px 0;

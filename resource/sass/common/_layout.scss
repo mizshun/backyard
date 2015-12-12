@@ -20,7 +20,7 @@ p {
 ---------------------------------------- */
 body {
 	margin-top: 60px;
-	font-size: $baseFontSize;
+	font-size: $base-font-size;
 }
 
 /* ----------------------------------------
@@ -55,7 +55,7 @@ body {
 .global-header {
 	margin-bottom: 0;
 	border-bottom-width: 5px;
-	font-size: $baseFontSize;
+	font-size: $base-font-size;
 	&__banner {
 		display: inline-block;
 	}
@@ -105,7 +105,7 @@ main {
 		margin-bottom: 1em;
 		padding-bottom: .5em;
 		border-bottom: 1px dashed $base-border-color;
-		font-size: $headingFontSize;
+		font-size: $heading-font-size;
 	}
 }
 
