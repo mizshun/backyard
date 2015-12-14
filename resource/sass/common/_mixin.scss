@@ -8,10 +8,19 @@
  * @param  {string} $width 幅
  */
 @mixin vertical-form-item( $width: 100% ) {
-	> label {
+	label {
 		display: block;
 	}
-	> textarea {
+	textarea {
 		width: $width;
 	}
+}
+
+/**
+ * 横長のボタンを作成
+ * @param  {number} $padding テキスト横のスペース幅
+ */
+@mixin btn-long( $padding: 60px ) {
+		padding-left: $padding;
+	    padding-right: $padding;
 }

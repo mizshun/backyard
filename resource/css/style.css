@@ -3,6 +3,10 @@
  * フォールアイテムのラベルをたて揃えする
  * @param  {string} $width 幅
  */
+/**
+ * 横長のボタンを作成
+ * @param  {number} $padding テキスト横のスペース幅
+ */
 /* ----------------------------------------
 	フォーム
 ---------------------------------------- */
@@ -308,6 +312,7 @@ main .main-header {
   /* 課題 */
   /* コメント */
   /* コメントの編集 */
+  /* 状態の更新 */
 }
 .task .task-card > * + * {
   margin-top: 15px;
@@ -469,11 +474,22 @@ main .main-header {
 .task .comment__item-body {
   margin: 15px 30px 30px;
 }
-.task .comment__item-comment > label {
+.task .comment__item-comment label {
   display: block;
 }
-.task .comment__item-comment > textarea {
+.task .comment__item-comment textarea {
   width: 100%;
+}
+.task .comment__item-register {
+  margin-top: 10px;
+  text-align: center;
+}
+.task .comment__item-register > * {
+  margin: 0 5px;
+}
+.task .comment__item-register > input {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 .task .input__title {
   display: none;
@@ -519,10 +535,10 @@ main .main-header {
 .task .input__comment {
   padding-top: 20px;
 }
-.task .input__comment > label {
+.task .input__comment label {
   display: block;
 }
-.task .input__comment > textarea {
+.task .input__comment textarea {
   width: 100%;
 }
 .task .input__register {
@@ -530,6 +546,42 @@ main .main-header {
   text-align: center;
 }
 .task .input__register > input {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.task .update-status__status-body div:first-child > label {
+  display: block;
+}
+.task .update-status__status-body > table {
+  width: 100%;
+  margin-top: 10px;
+}
+.task .update-status__status-body > table td:first-child {
+  width: 40%;
+}
+.task .update-status__status-body > table select {
+  width: 100%;
+}
+.task .update-status__status-body > table + div > label {
+  width: 40%;
+}
+.task .update-status__status-body > table + div > input {
+  width: 60%;
+}
+.task .update-status__comment {
+  margin-top: 10px;
+}
+.task .update-status__comment label {
+  display: block;
+}
+.task .update-status__comment textarea {
+  width: 100%;
+}
+.task .update-status__register {
+  margin-top: 10px;
+  text-align: center;
+}
+.task .update-status__register > input {
   padding-left: 60px;
   padding-right: 60px;
 }

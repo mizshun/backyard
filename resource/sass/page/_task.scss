@@ -204,6 +204,16 @@
 		&-comment {
 			@include vertical-form-item();
 		}
+		&-register {
+			margin-top: 10px;
+			text-align: center;
+			> * {
+				margin: 0 5px;
+			}
+			> input {
+				@include btn-long();
+			}
+		}
 	}
 }
 
@@ -263,9 +273,50 @@
 		margin-top: 20px;
 		text-align: center;
 		> input {
-			$padding: 60px;
-			padding-left: $padding;
-		    padding-right: $padding;
+			@include btn-long();
+		}
+	}
+}
+
+/* 状態の更新 */
+.update-status {
+	&__status {
+		&-body {
+			$width: 40%;
+			div:first-child {
+				> label {
+					display: block;
+				}
+			}
+			> table {
+				width: 100%;
+				margin-top: 10px;
+				td:first-child {
+					width: $width;
+				}
+				select {
+				    width: 100%;
+				}
+				+ div {
+					> label {
+						width: $width;
+					}
+					> input {
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+	&__comment {
+		margin-top: 10px;
+		@include vertical-form-item();
+	}
+	&__register {
+		margin-top: 10px;
+		text-align: center;
+		> input {
+			@include btn-long();
 		}
 	}
 }
