@@ -244,12 +244,10 @@
 			<section class="comment">
 				<div class="comment__header clearfix">
 					<h2 class="comment__title pull-left"><span>15</span>コメント</h2>
-					<div class="pull-right">
-							<ul class="list-inline text-right">
-								<li><a href="#" class="btn btn-default btn-xs active" role="button">全て表示</a></li>
-								<li><a href="#" class="btn btn-default btn-xs" role="button">コメントのみ表示</a></li>
-							</ul>
-					</div>
+					<ul class="comment__disp list-inline pull-right">
+						<li><a href="#" class="btn btn-default btn-xs active" role="button">全て表示</a></li>
+						<li><a href="#" class="btn btn-default btn-xs" role="button">コメントのみ表示</a></li>
+					</ul>
 				</div>
 
 				<div class="comment__control">
@@ -265,6 +263,7 @@
 						</a>
 					</div>
 					<!-- /最小化コメント -->
+
 					<!-- 非展開コメント -->
 					<article class="comment__item">
 						<header class="comment__item-header comment__item-header--overview clearfix">
@@ -325,7 +324,17 @@
 								</div>
 							</div>
 							<ul class="comment__item-control list-inline list-delimiter">
-								<li><a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;コメントの操作</a></li>
+								<li>
+									<a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;コメントの操作</a>
+									<ul class="popup js-popup list-unstyled">
+										<li>
+											<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><a class="edit-link" href="#">&nbsp;編集</a>
+										</li>
+										<li>
+											<span class="glyphicon glyphicon-trash" aria-hidden="true"></span><a class="delete-link" href="#">&nbsp;削除</a>
+										</li>
+									</ul>
+								</li>
 								<li><a href="#"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></a></li>
 							</ul>
 						</header><!-- /comment__item-header -->
@@ -352,6 +361,18 @@
 							<p class="comment__item-comment">
 							コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。
 							</p>
+
+							<div class="comment__item-comment">
+								<label>コメント</label>
+								<form action="" method="post">
+									<textarea name="comment" rows="8" cols="100"></textarea>
+									<div class="comment__item-register">
+										<a href="#">キャンセル</a>
+										<input class="btn btn-default" type="submit" value="登録">
+									</div>
+								</form>
+							</div><!-- /input__comment -->
+
 						</div><!-- /comment__item-body -->
 					</article><!-- /comment__item -->
 
@@ -439,14 +460,87 @@
 
 			<section class="input">
 				<h2 class="input__title">コメントの編集</h2>
-				<ul class="nav nav-tabs">
+				<ul class="input__tab nav nav-tabs">
 					<li role="presentation" class="active">
-						<a href="#"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;編集</a>
+						<a href="#js-input-edit" aria-controls="edit" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;編集</a>
 					</li>
 					<li role="presentation">
-						<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;プレビュー</a>
+						<a href="#js-input-preview" aria-controls="preview" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;プレビュー</a>
 					</li>
-				</ul>
+				</ul><!-- /input__tabs -->
+
+				<form ation="" method="post">
+					<div class="input__edit tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="js-input-edit">
+								<div class="input__status">
+									<p class="input__status-switch">
+										<a href="#" role="button">
+											<span><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>状態の変更</span>
+											<span><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>状態の変更</span>
+										</a>
+									</p><!-- /input__switchstatus -->
+
+									<div class="input__status-body clearfix">
+										<div class="input__status-left">
+											<label><input type="radio" name="switch_status" value=""><span>状態を変更しない</span></label>
+											<label><input type="radio" name="switch_status" value="3"><span data-bind="text: name">状態を「処理済み」に変更</span></label>
+											<label><input type="radio" name="switch_status" value="4"><span data-bind="text: name">状態を「完了」に変更</span></label>
+											<label><input type="radio" name="switch_status" value="1"><span data-bind="text: name">状態を「未対応」に戻す</span></label>
+										</div>
+
+										<table class="input__status-right">
+											<tbody>
+												<tr>
+													<td>
+													<label for="resolution">完了理由</label>
+													</td>
+													<td>
+														<select>
+															<option></option>
+															<option value="0">対応済み</option>
+															<option value="1">対応しない</option>
+															<option value="2">無効</option>
+															<option value="3">重複</option>
+															<option value="4">再現しない</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<td>
+													<label>担当者</label>
+													</td>
+													<td>
+														<select>
+															<option></option>
+															<option value="83355">mizzz</option>
+														</select>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+										<div class="input__status-bottom">
+											<label>期限日</label><input type="text">
+										</div>
+									</div><!-- /input__status-body -->
+								</div><!-- /input__status -->
+
+								<div class="input__comment">
+									<label for="input__comment">コメント</label>
+									<textarea id="input__comment" name="comment" rows="8" cols="100"></textarea>
+								</div><!-- /input__comment -->
+						</div><!-- /js-input-edit -->
+
+						<div role="tabpanel" class="tab-pane fade" id="js-input-preview">
+						コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。コメントのテストです。
+						</div><!-- /js-input-preview -->
+
+					</div><!-- /input__edit -->
+
+					<div class="input__register">
+						<input class="btn btn-default" type="submit" value="登録">
+					</div>
+				</form>
 			</section><!-- /input -->
 		</div><!-- /primary -->
 
@@ -457,6 +551,62 @@
 						<h2 class="panel-title">状態の変更</h2>
 					</div>
 					<div class="panel-body">
+						<form ation="" method="post">
+							<div class="update-status__status">
+								<div class="update-status__status-body clearfix">
+									<div>
+										<label><input type="radio" name="switch_status" value=""><span>状態を変更しない</span></label>
+										<label><input type="radio" name="switch_status" value="3"><span data-bind="text: name">状態を「処理済み」に変更</span></label>
+										<label><input type="radio" name="switch_status" value="4"><span data-bind="text: name">状態を「完了」に変更</span></label>
+										<label><input type="radio" name="switch_status" value="1"><span data-bind="text: name">状態を「未対応」に戻す</span></label>
+									</div>
+
+									<table>
+										<tbody>
+											<tr>
+												<td>
+												<label for="resolution">完了理由</label>
+												</td>
+												<td>
+													<select>
+														<option></option>
+														<option value="0">対応済み</option>
+														<option value="1">対応しない</option>
+														<option value="2">無効</option>
+														<option value="3">重複</option>
+														<option value="4">再現しない</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td>
+												<label>担当者</label>
+												</td>
+												<td>
+													<select>
+														<option></option>
+														<option value="83355">mizzz</option>
+													</select>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div>
+										<label>期限日</label><input type="text">
+									</div>
+								</div><!-- /update-status__status-body -->
+							</div><!-- /update-status__status -->
+
+							<div class="update-status__comment">
+								<label for="update-status__comment">コメント</label>
+								<textarea id="update-status__comment" name="comment" rows="8" cols="100"></textarea>
+							</div><!-- /update-status__comment -->
+
+							<div class="update-status__register">
+								<input class="btn btn-default" type="submit" value="登録">
+							</div>
+						</form>
 					</div>
 				</div>
 			</aside>
@@ -467,6 +617,48 @@
 						<h2 class="panel-title">変更履歴</h2>
 					</div>
 					<div class="panel-body">
+						<ol class="update-history">
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/06/25 23:16:10</time>&nbsp;&nbsp;新規作成<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/06/25 23:16:10</time>&nbsp;&nbsp;未対応<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/06/28 13:14:52</time>&nbsp;&nbsp;処理中<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/11/29 00:23:45</time>&nbsp;&nbsp;未対応<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/11/29 00:24:03</time>&nbsp;&nbsp;処理中<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/12/06 13:55:00</time>&nbsp;&nbsp;処理済み<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/12/06 13:55:05</time>&nbsp;&nbsp;完了<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/12/06 13:55:55</time>&nbsp;&nbsp;処理中<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/12/06 13:56:12</time>&nbsp;&nbsp;処理済み<br>
+								mizzz
+							</li>
+							<li>
+								<time datetime="2015-06-25 23:16:10">2015/12/06 18:44:58</time>&nbsp;&nbsp;処理中<br>
+								mizzz
+							</li>
+						</ol><!-- /update-history -->
 					</div>
 				</div>
 			</aside>
