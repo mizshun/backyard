@@ -89,10 +89,8 @@
 	&__title {
 		font-size: $large-font-size;
 	}
-	&__nav {
-		ul {
-			margin-bottom: 0;
-		}
+	&__disp {
+		margin-bottom: 0;
 	}
 	// コメントコントローラー
 	&__control {
@@ -191,5 +189,66 @@
 .input {
 	&__title {
 		display: none;
+	}
+	// タブ
+	&__tab {
+		$width: 5px;
+		border-bottom-width: $width;
+		> li {
+			margin-bottom: -$width;
+		}
+	}
+	// 編集・プレビュー
+	&__edit {
+		padding: 10px 25px 25px;
+		border: 2px solid #ddd;
+		border-top: none;
+	}
+	// ステータス
+	&__status {
+		margin: -10px -25px 0;
+		padding: 10px 25px 25px;
+		background-color: $base-bg-color;
+	}
+	&__status-switch {
+		text-align: right;
+	}
+	&__status-body {
+		margin-top: 10px;
+	}
+	&__status-left {
+		float: left;
+		width: 50%;
+		margin-bottom: 10px;
+		> label {
+			display: block;
+		}
+	}
+	&__status-right {
+		float: right;
+		width: 50%;
+		margin-bottom: 10px;
+	}
+	&__status-bottom {
+		clear: both;
+	}
+	&__comment {
+		padding-top: 20px;
+		> label {
+			display: block;
+		}
+		> textarea {
+			    width: 100%;
+		}
+	}
+	// 登録ボタン
+	&__register {
+		margin-top: 20px;
+		text-align: center;
+		> input {
+			$padding: 60px;
+			padding-left: $padding;
+		    padding-right: $padding;
+		}
 	}
 }

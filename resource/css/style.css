@@ -95,6 +95,13 @@ p {
   padding: 0;
 }
 
+input,
+textarea {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #aaa;
+}
+
 /* ----------------------------------------
 	レイアウト
 ---------------------------------------- */
@@ -358,7 +365,7 @@ main .main-header {
 .task .comment__title {
   font-size: 16px;
 }
-.task .comment__nav ul {
+.task .comment__disp {
   margin-bottom: 0;
 }
 .task .comment__control {
@@ -442,6 +449,61 @@ main .main-header {
 }
 .task .input__title {
   display: none;
+}
+.task .input__tab {
+  border-bottom-width: 5px;
+}
+.task .input__tab > li {
+  margin-bottom: -5px;
+}
+.task .input__edit {
+  padding: 10px 25px 25px;
+  border: 2px solid #ddd;
+  border-top: none;
+}
+.task .input__status {
+  margin: -10px -25px 0;
+  padding: 10px 25px 25px;
+  background-color: #eee;
+}
+.task .input__status-switch {
+  text-align: right;
+}
+.task .input__status-body {
+  margin-top: 10px;
+}
+.task .input__status-left {
+  float: left;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.task .input__status-left > label {
+  display: block;
+}
+.task .input__status-right {
+  float: right;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.task .input__status-bottom {
+  clear: both;
+}
+.task .input__comment {
+  padding-top: 20px;
+}
+.task .input__comment > label {
+  display: block;
+}
+.task .input__comment > textarea {
+  width: 100%;
+}
+.task .input__register {
+  margin-top: 20px;
+  text-align: center;
+}
+.task .input__register > input {
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
