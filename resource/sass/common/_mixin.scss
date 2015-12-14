@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+// -------------------------------
+// フォーム
+// -------------------------------
+/**
+ * フォールアイテムのラベルをたて揃えする
+ * @param  {string} $width 幅
+ */
+@mixin vertical-form-item( $width: 100% ) {
+	> label {
+		display: block;
+	}
+	> textarea {
+		width: $width;
+	}
+}
