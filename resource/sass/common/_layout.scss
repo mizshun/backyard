@@ -84,6 +84,44 @@ body {
 }
 
 /* ----------------------------------------
+	追加ヘッダー
+---------------------------------------- */
+.attach-header {
+	$padding: 5px;
+	position: fixed;
+	top: 51px; // TODO 動的に取得
+	width: 100%;
+	padding-top: $padding;
+	padding-bottom: $padding;
+	border-bottom: 1px solid $base-border-color;
+	background-color: $base-bg-color;
+	z-index: 999;
+	.global-breadcrumb {
+		ul {
+			margin-bottom: 0;
+		}
+		li {
+			position: relative;
+		}
+		img {
+			width: 20px;
+			height: auto;
+			margin-right: 3px;
+		}
+	}
+	.popup {
+		position: absolute;
+	    top: 25px;
+	    left: 0;
+	}
+	.task-nav {
+		ul {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* ----------------------------------------
 	プロジェクトナビ
 ---------------------------------------- */
 .project-nav {

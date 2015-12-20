@@ -57,6 +57,18 @@
 	}
 }
 
+.list-breadcrumb {
+	> li {
+		+ li {
+			padding-left: 0;
+			&::before {
+				content: ">";
+				padding-right: 5px;
+			}
+		}
+	}
+}
+
 /* リストアイテムにホバー時に表示するコンテンツを追加する */
 .list-hover-disp {
 	> li {
@@ -98,5 +110,20 @@
 	}
 	&__counter {
 		padding: 5px 0;
+	}
+}
+
+/* ----------------------------------------
+	ポップアップ
+---------------------------------------- */
+.popup {
+	width: 120px;
+    padding: 10px;
+	border: 2px solid $base-border-color;
+	background-color: #fff;
+	z-index: 999;
+	a {
+		width: 100%;
+		line-height: 1.8;
 	}
 }

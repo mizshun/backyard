@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * フォールアイテムのラベルをたて揃えする
+ * フォームアイテムのラベルをたて揃えする
  * @param  {string} $width 幅
  */
 /**
@@ -56,6 +56,14 @@
   border-left: none;
 }
 
+.list-breadcrumb > li + li {
+  padding-left: 0;
+}
+.list-breadcrumb > li + li::before {
+  content: ">";
+  padding-right: 5px;
+}
+
 /* リストアイテムにホバー時に表示するコンテンツを追加する */
 .list-hover-disp > li {
   overflow: hidden;
@@ -87,6 +95,21 @@
 }
 .graph__counter {
   padding: 5px 0;
+}
+
+/* ----------------------------------------
+	ポップアップ
+---------------------------------------- */
+.popup {
+  width: 120px;
+  padding: 10px;
+  border: 2px solid #aaa;
+  background-color: #fff;
+  z-index: 999;
+}
+.popup a {
+  width: 100%;
+  line-height: 1.8;
 }
 
 /* ----------------------------------------
@@ -164,6 +187,39 @@ body {
 .global-header__personal img {
   max-width: 32px;
   height: auto;
+}
+
+/* ----------------------------------------
+	追加ヘッダー
+---------------------------------------- */
+.attach-header {
+  position: fixed;
+  top: 51px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+  background-color: #eee;
+  z-index: 999;
+}
+.attach-header .global-breadcrumb ul {
+  margin-bottom: 0;
+}
+.attach-header .global-breadcrumb li {
+  position: relative;
+}
+.attach-header .global-breadcrumb img {
+  width: 20px;
+  height: auto;
+  margin-right: 3px;
+}
+.attach-header .popup {
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.attach-header .task-nav ul {
+  margin-bottom: 0;
 }
 
 /* ----------------------------------------
@@ -461,15 +517,6 @@ main .main-header {
   position: absolute;
   top: 25px;
   left: 0;
-  width: 120px;
-  padding: 10px;
-  border: 2px solid #aaa;
-  background-color: #fff;
-  z-index: 9999;
-}
-.task .comment__item-control > li .popup a {
-  width: 100%;
-  line-height: 1.8;
 }
 .task .comment__item-body {
   margin: 15px 30px 30px;
