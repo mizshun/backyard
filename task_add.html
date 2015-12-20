@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プロジェクト名 | プロジェクトホーム - Backyard</title>
+<title>プロジェクト1(project) | 課題の追加 - Backyard</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 <link rel="stylesheet" href="resource/css/style.css">
@@ -167,128 +167,89 @@
 
 <main class="taskadd container-fluid">
 	<h1 class="main-header">課題の追加</h1>
-		<div class="input">
-			<form action="" method="post">
-				<div class="input__register">
-					<input class="btn btn-default" type="submit" value="プレビュー">
-					<input class="btn btn-default" type="submit" value="追加">
-				</div><!-- /input__register -->
 
-				<div class="task-card well">
-					<table class="table table-border-dotted">
-						<tbody>
-							<tr>
-								<th>* 件名</th>
-								<td><input type="text"></td>
-							</tr>
-							<tr>
-								<th>詳細</th>
-								<td><textarea rows="8" cols="100"></textarea></td>
-							</tr>
-							<tr>
-								<th colspan="2">課題の属性</th>
-							</tr>
-							<tr>
-								<table class="table">
-									<tbody>
-										<tr>
-											<th>* 種別</th>
-											<td>
-												<select>
-													<option></option>
-													<option value="0">対応済み</option>
-													<option value="1">タスク</option>
-													<option value="2">バグ</option>
-													<option value="3">要望</option>
-													<option value="4">その他</option>
-												</select>
-											</td>
-											<th>* 優先度</th>
-											<td>
-												<select>
-													<option></option>
-													<option value="0">対応済み</option>
-													<option value="1"></option>
-													<option value="2"></option>
-													<option value="3"></option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<th>* 種別</th>
-											<td>
-												<select>
-													<option></option>
-													<option value="0">対応済み</option>
-													<option value="1">タスク</option>
-													<option value="2">バグ</option>
-													<option value="3">要望</option>
-													<option value="4">その他</option>
-												</select>
-											</td>
-											<th>* 優先度</th>
-											<td>
-											</td>
-										</tr>
-										<tr>
-											<th>* 種別</th>
-											<td>
-												<select>
-													<option></option>
-													<option value="0">対応済み</option>
-													<option value="1">タスク</option>
-													<option value="2">バグ</option>
-													<option value="3">要望</option>
-													<option value="4">その他</option>
-												</select>
-											</td>
-											<th>* 優先度</th>
-											<td>
-											</td>
-										</tr>
-										<tr>
-											<th>* 種別</th>
-											<td>
-												<select>
-													<option></option>
-													<option value="0">対応済み</option>
-													<option value="1">タスク</option>
-													<option value="2">バグ</option>
-													<option value="3">要望</option>
-													<option value="4">その他</option>
-												</select>
-											</td>
-											<th>* 優先度</th>
-											<td>
-												<select>
-													<option></option>
-													<option value="0">対応済み</option>
-													<option value="1">タスク</option>
-													<option value="2">バグ</option>
-													<option value="3">要望</option>
-													<option value="4">その他</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<th>期限日</th>
-											<td colspan="3">
-												<input type="text">
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</tr>
-						</tbody>
-					</table>
-				</div><!-- /task-card -->
+	<div class="message alert alert-warning" role="alert">
+		<p class="text-danger">件名は必ず入力してください。</p>
+	</div><!-- /message -->
 
-				<div class="input__register">
-					<input class="btn btn-default" type="submit" value="プレビュー">
-					<input class="btn btn-default" type="submit" value="追加">
-				</div><!-- /input__register -->
-			</form>
-		</div><!-- /input -->
+	<div class="input">
+		<form action="" method="post">
+			<div class="input__register">
+				<input class="btn btn-default" type="submit" value="プレビュー">
+				<input class="btn btn-default" type="submit" value="追加">
+			</div><!-- /input__register -->
+
+			<div class="task-card well">
+				<table class="table table-border-dotted">
+					<tbody>
+						<tr>
+							<th>* 件名</th>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<th>詳細</th>
+							<td><textarea rows="8" cols="100"></textarea></td>
+						</tr>
+						<tr>
+							<th colspan="2">課題の属性</th>
+						</tr>
+						<tr>
+							<table class="input__attributes table table-bordered">
+								<tbody>
+									<tr>
+										<th>* 種別</th>
+										<td>
+											<select>
+												<option value="0">対応済み</option>
+												<option value="1" selected>タスク</option>
+												<option value="2">バグ</option>
+												<option value="3">要望</option>
+												<option value="4">その他</option>
+											</select>
+										</td>
+										<th>* 優先度</th>
+										<td>
+											<select>
+												<option value="0">高</option>
+												<option value="1" selected>中</option>
+												<option value="2">低</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>カテゴリー</th>
+										<td>
+											<select>
+												<option></option>
+												<option value="0">ヘッダー</option>
+												<option value="1">カテゴリー1</option>
+												<option value="2">カテゴリー2</option>
+											</select>
+										</td>
+										<th>状態</th>
+										<td><span>新規作成</span></td>
+									</tr>
+									<tr>
+										<th>完了理由</th>
+										<td><span>-</span></td>
+										<th>期限日</th>
+										<td>
+											<input type="text">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- /task-card -->
+
+			<div class="input__register">
+				<input class="btn btn-default" type="submit" value="プレビュー">
+				<input class="btn btn-default" type="submit" value="追加">
+			</div><!-- /input__register -->
+		</form>
+	</div><!-- /input -->
 </main>
 
 

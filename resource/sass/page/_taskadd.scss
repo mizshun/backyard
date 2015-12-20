@@ -4,6 +4,10 @@
 /* 入力フォーム */
 .input {
 	&__register {
+		text-align: right;
+		> input {
+			@include btn-fixed-width();
+		}
 		// ボタンエリア
 		&:nth-of-type(1) {
 			margin-bottom: 20px;
@@ -12,10 +16,32 @@
 
 	.task-card {
 		> table {
+			> tbody {
+				> tr {
+					&:first-child {
+						th,
+						td {
+							border-top: none;
+						}
+					}
+				}
+			}
 			input,
 			textarea {
 				width: 100%;
 			}
+		}
+	}
+
+	&__attributes {
+		th {
+			width: 10%;
+		}
+		td {
+			background-color: #fff;
+		}
+		select {
+			width: 200px;
 		}
 	}
 }

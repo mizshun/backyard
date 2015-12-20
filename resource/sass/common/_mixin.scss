@@ -19,9 +19,8 @@
 
 /**
  * 横長のボタンを作成
- * @param  {number} $padding テキスト横のスペース幅
+ * @param  {number} $width テキスト横のスペース幅
  */
-@mixin btn-long( $padding: 60px ) {
-		padding-left: $padding;
-	    padding-right: $padding;
+@mixin btn-fixed-width( $width: 180px ) {
+		width: $width;
 }
