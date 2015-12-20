@@ -273,6 +273,15 @@ main .main-header {
 }
 
 /* ----------------------------------------
+	メッセージエリア
+---------------------------------------- */
+.message {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ----------------------------------------
 	ページ固有スタイル
 ---------------------------------------- */
 /* ダッシュボード */
@@ -524,6 +533,7 @@ main .main-header {
 .task .comment__item-comment label {
   display: block;
 }
+.task .comment__item-comment input[type=text],
 .task .comment__item-comment textarea {
   width: 100%;
 }
@@ -585,6 +595,7 @@ main .main-header {
 .task .input__comment label {
   display: block;
 }
+.task .input__comment input[type=text],
 .task .input__comment textarea {
   width: 100%;
 }
@@ -615,12 +626,19 @@ main .main-header {
 .task .update-status__status-body > table + div > input {
   width: 60%;
 }
+.task .update-status__status-current {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}
 .task .update-status__comment {
   margin-top: 10px;
 }
 .task .update-status__comment label {
   display: block;
 }
+.task .update-status__comment input[type=text],
 .task .update-status__comment textarea {
   width: 100%;
 }
@@ -631,6 +649,21 @@ main .main-header {
 .task .update-status__register > input {
   padding-left: 60px;
   padding-right: 60px;
+}
+
+/* 課題の追加 */
+.taskadd {
+  /* ----------------------------------------
+  	課題の表示
+  ---------------------------------------- */
+  /* 入力フォーム */
+}
+.taskadd .input__register:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+.taskadd .input .task-card > table input,
+.taskadd .input .task-card > table textarea {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

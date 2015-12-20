@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プロジェクト名 | プロジェクトホーム - Backyard</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="resource/css/style.css">
+<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+
+
+<nav class="global-nav container-fluid navbar navbar-default navbar-fixed-top navbar-inverse">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">
+			<img src="./resource/image/common/20x20.png" width="20" height="20" alt="Backyard">
+		</a>
+	</div>
+
+	<ul class="nav navbar-nav">
+		<li><a href="#">ダッシュボード</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">プロジェクト<span class="caret"></span></a>
+			<ul class="dropdown-menu dropdown-menu-long dropdown-menu-list">
+				<li>
+					<div class="form-group">
+						<label class="sr-only" for="プロジェクトを検索">プロジェクトを検索</label>
+						<div class="input-group input-group-sm">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+							<input type="text" class="form-control" placeholder="">
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#">
+						<img src="resource/image/common/20x20.png" width="20" height="20" alt="">
+						<span>プロジェクト1</span>
+					</a>
+					<ul class="list-inline">
+						<li><a href="#"><span>課題の検索</span></a></li>
+						<li><a href="#"><span>課題の追加</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">最近見た課題<span class="caret"></span></a>
+			<ul class="dropdown-menu dropdown-menu-long">
+				<li>
+					<div class="form-group">
+						<label class="sr-only" for="課題を検索">課題を検索</label>
+						<div class="input-group input-group-sm">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+							<input type="text" class="form-control" placeholder="">
+						</div>
+					</div>
+				</li>
+				<li>
+					<ul class="list-unstyled dropdown-menu-list">
+						<li>
+							<a href="#">
+								<img src="resource/image/common/20x20.png" width="20" height="20" alt="">
+								<span>[project-1] 課題1</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="resource/image/common/20x20.png" width="20" height="20" alt="">
+								<span>[project-1] 課題1</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="resource/image/common/20x20.png" width="20" height="20" alt="">
+								<span>[project-1] 課題1</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="resource/image/common/20x20.png" width="20" height="20" alt="">
+								<span>[project-1] 課題1</span>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="#">メンバー</a></li>
+		<li><a href="#">課題の検索</a></li>
+		<li>
+			<form class="search-keyword navbar-form" role="search">
+				<div class="form-group">
+					<label class="sr-only" for="全体からキーワード検索">全体からキーワード検索</label>
+					<div class="input-group input-group-sm input-group-long">
+						<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+						<input type="text" class="form-control" placeholder="全体からキーワード検索">
+					</div>
+				</div>
+			</form>
+		</li>
+	</ul>
+</nav>
+
+<header class="global-header page-header container-fluid">
+	<div class="row">
+		<div class="col-sm-7 clearfix">
+			<div class="global-header__banner">
+				<a href="#"><img src="resource/image/common/60x60.png" alt="logo"></a>
+			</div>
+			<h1 class="global-header__title">mizzz</h1>
+		</div>
+
+		<div class="col-sm-5 text-right">
+			<div class="global-header__personal">
+				<a href="#" title="◯◯◯◯さんのプロフィール"><img src="resource/image/common/office-worker2.png" alt=""></a>
+				<span>◯◯◯◯さん、こんにちは</span>
+			</div>
+			<nav class="global-header__sub-nuv">
+				<ul class="list-inline list-delimiter">
+					<li><a href="#">プロジェクト設定</a></li>
+					<li><a href="#">個人設定</a></li>
+					<li><a href="#">スペース設定</a></li>
+					<li><a href="#" target="_blank">ヘルプ</a></li>
+					<li><a href="#">ログアウト</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+
+<nav class="project-nav navbar navbar-default">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">課題の検索</a></li>
+			<li><a href="#">課題の追加</a></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<form class="search-keyword navbar-form" role="search">
+					<div class="form-group">
+						<label class="sr-only" for="課題を検索">課題を検索</label>
+						<div class="input-group input-group-sm input-group-long">
+							<input type="text" class="form-control" placeholder="課題を検索">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+					</div>
+				</form>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+
+<main class="taskadd container-fluid">
+	<h1 class="main-header">課題の追加</h1>
+		<div class="input">
+			<form action="" method="post">
+				<div class="input__register">
+					<input class="btn btn-default" type="submit" value="プレビュー">
+					<input class="btn btn-default" type="submit" value="追加">
+				</div><!-- /input__register -->
+
+				<div class="task-card well">
+					<table class="table table-border-dotted">
+						<tbody>
+							<tr>
+								<th>* 件名</th>
+								<td><input type="text"></td>
+							</tr>
+							<tr>
+								<th>詳細</th>
+								<td><textarea rows="8" cols="100"></textarea></td>
+							</tr>
+							<tr>
+								<th colspan="2">課題の属性</th>
+							</tr>
+							<tr>
+								<table class="table">
+									<tbody>
+										<tr>
+											<th>* 種別</th>
+											<td>
+												<select>
+													<option></option>
+													<option value="0">対応済み</option>
+													<option value="1">タスク</option>
+													<option value="2">バグ</option>
+													<option value="3">要望</option>
+													<option value="4">その他</option>
+												</select>
+											</td>
+											<th>* 優先度</th>
+											<td>
+												<select>
+													<option></option>
+													<option value="0">対応済み</option>
+													<option value="1"></option>
+													<option value="2"></option>
+													<option value="3"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>* 種別</th>
+											<td>
+												<select>
+													<option></option>
+													<option value="0">対応済み</option>
+													<option value="1">タスク</option>
+													<option value="2">バグ</option>
+													<option value="3">要望</option>
+													<option value="4">その他</option>
+												</select>
+											</td>
+											<th>* 優先度</th>
+											<td>
+											</td>
+										</tr>
+										<tr>
+											<th>* 種別</th>
+											<td>
+												<select>
+													<option></option>
+													<option value="0">対応済み</option>
+													<option value="1">タスク</option>
+													<option value="2">バグ</option>
+													<option value="3">要望</option>
+													<option value="4">その他</option>
+												</select>
+											</td>
+											<th>* 優先度</th>
+											<td>
+											</td>
+										</tr>
+										<tr>
+											<th>* 種別</th>
+											<td>
+												<select>
+													<option></option>
+													<option value="0">対応済み</option>
+													<option value="1">タスク</option>
+													<option value="2">バグ</option>
+													<option value="3">要望</option>
+													<option value="4">その他</option>
+												</select>
+											</td>
+											<th>* 優先度</th>
+											<td>
+												<select>
+													<option></option>
+													<option value="0">対応済み</option>
+													<option value="1">タスク</option>
+													<option value="2">バグ</option>
+													<option value="3">要望</option>
+													<option value="4">その他</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th>期限日</th>
+											<td colspan="3">
+												<input type="text">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</tr>
+						</tbody>
+					</table>
+				</div><!-- /task-card -->
+
+				<div class="input__register">
+					<input class="btn btn-default" type="submit" value="プレビュー">
+					<input class="btn btn-default" type="submit" value="追加">
+				</div><!-- /input__register -->
+			</form>
+		</div><!-- /input -->
+</main>
+
+
+<footer class="global-footer container-fluid text-center">
+	<a href="#pagetop" class="global-footer__pagetop">このページの一番上へ</a>
+	<p class="global-footer__copyright"><small>Backyard Copyright ©2015-2016 by <site><a href="#">mizzz</a></site> All rights reserved.</small><br>
+		<small>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></small>
+	</p>
+</footer>
+
+
+<!-- JavaScript -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script>window.jQuery||document.write("<script type='text/javascript' src='resource/js/lib/jquery-2.1.4.min.js'>\x3C/script>")</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+<script>window._||document.write("<script type='text/javascript' src='resource/js/lib/underscore-min.js'>\x3C/script>")</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
+<script>window.Backbone||document.write("<script type='text/javascript' src='resource/js/lib/backbone-1.2.3.min.js'>\x3C/script>")</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- /JavaScript -->
+
+
+
+<div id="latestUpdateSettingPopupDialogElement" class="panel panel-default hidden">
+	<p class="panel-heading">表示設定</p>
+	<div class="popup_content">
+		<!-- <form id="latestUpdateSettingPopupDialogForm" name="ChangeLastUpdatedNumAndType" action="/ChangeLastUpdatedNumAndType.action" method="post"> -->
+		<form id="" name="" action="/projects.html" method="get">
+			<table>
+				<tbody>
+				<tr>
+					<td>表示件数:</td>
+					<td>
+						<input id="last-updated-num-50" type="radio" name="last-updated-num" value="50" checked>
+						<label for="last-updated-num-50">50</label>
+						<input id="last-updated-num-100" type="radio" name="last-updated-num" value="100">
+						<label for="last-updated-num-100">100</label>
+						<input id="last-updated-num-200" type="radio" name="last-updated-num" value="200">
+						<label for="last-updated-num-200">200</label>
+					</td>
+				</tr>
+				<tr>
+					<td>表示対象:</td>
+					<td>
+						<input id="enable-types-0" type="checkbox" name="enable-types" value="0" checked>
+						<label for="enable-types-0">課題</label><br>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<p class="popup_close">
+				<input type="submit" class="submitbtn Btn-gray" value="反映する">
+				<a id="latestUpdateSettingPopupDialogCloseButton" class="close-link" href="javascript:void(0);">キャンセル</a>
+			</p>
+		</form>
+		ここで設定した内容はブラウザのクッキーに保存されます。次回表示時も有効です。
+	</div>
+</div>
+
+
+</body>
+</html>
