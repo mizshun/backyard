@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>プロジェクト1(project) | 課題の追加 - Backyard</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<link rel="stylesheet" href="./resource/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="resource/css/style.css">
 <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -15,6 +15,145 @@
 </head>
 <body>
 
+<header class="global-header page-header container-fluid">
+	<div class="row">
+		<div class="col-sm-7 clearfix">
+			<div class="global-header__banner">
+				<a href="#"><img src="resource/image/common/60x60.png" alt="logo"></a>
+			</div>
+			<h1 class="global-header__title">mizzz</h1>
+		</div>
+
+		<div class="col-sm-5 text-right">
+			<div class="global-header__personal">
+				<a href="#" title="◯◯◯◯さんのプロフィール"><img src="resource/image/common/office-worker2.png" alt=""></a>
+				<span>◯◯◯◯さん、こんにちは</span>
+			</div>
+			<nav class="global-header__sub-nuv">
+				<ul class="list-inline list-delimiter">
+					<li><a href="#">プロジェクト設定</a></li>
+					<li><a href="#">個人設定</a></li>
+					<li><a href="#">スペース設定</a></li>
+					<li><a href="#" target="_blank">ヘルプ</a></li>
+					<li><a href="#">ログアウト</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<nav class="project-nav navbar navbar-default">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#">ホーム</a></li>
+			<li><a href="#">課題の検索</a></li>
+			<li><a href="#">課題の追加</a></li>
+		</ul>
+
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<form class="search-keyword navbar-form" role="search">
+					<div class="form-group">
+						<label class="sr-only" for="課題を検索">課題を検索</label>
+						<div class="input-group input-group-sm input-group-long">
+							<input type="text" class="form-control" placeholder="課題を検索">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+					</div>
+				</form>
+			</li>
+		</ul>
+	</div>
+</nav><!-- /prohect-nav-->
+
+<main class="taskadd container-fluid">
+	<h1 class="main-header">課題の追加</h1>
+
+	<div class="message alert alert-warning" role="alert">
+		<p class="text-danger">件名は必ず入力してください。</p>
+	</div><!-- /message -->
+
+	<div class="input">
+		<form action="" method="post">
+			<div class="input__register">
+				<input class="btn btn-default" type="submit" value="プレビュー">
+				<input class="btn btn-default" type="submit" value="追加">
+			</div><!-- /input__register -->
+
+			<div class="task-card well">
+				<table class="table table-border-dotted">
+					<tbody>
+						<tr>
+							<th>* 件名</th>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<th>詳細</th>
+							<td><textarea rows="8" cols="100"></textarea></td>
+						</tr>
+						<tr>
+							<th colspan="2">課題の属性</th>
+						</tr>
+						<tr>
+							<table class="input__attributes table table-bordered">
+								<tbody>
+									<tr>
+										<th>* 種別</th>
+										<td>
+											<select>
+												<option value="0">対応済み</option>
+												<option value="1" selected>タスク</option>
+												<option value="2">バグ</option>
+												<option value="3">要望</option>
+												<option value="4">その他</option>
+											</select>
+										</td>
+										<th>* 優先度</th>
+										<td>
+											<select>
+												<option value="0">高</option>
+												<option value="1" selected>中</option>
+												<option value="2">低</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>カテゴリー</th>
+										<td>
+											<select>
+												<option></option>
+												<option value="0">ヘッダー</option>
+												<option value="1">カテゴリー1</option>
+												<option value="2">カテゴリー2</option>
+											</select>
+										</td>
+										<th>状態</th>
+										<td><span>新規作成</span></td>
+									</tr>
+									<tr>
+										<th>完了理由</th>
+										<td><span>-</span></td>
+										<th>期限日</th>
+										<td>
+											<input type="text">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- /task-card -->
+
+			<div class="input__register">
+				<input class="btn btn-default" type="submit" value="プレビュー">
+				<input class="btn btn-default" type="submit" value="追加">
+			</div><!-- /input__register -->
+		</form>
+	</div><!-- /input -->
+</main>
 
 <nav class="global-nav container-fluid navbar navbar-default navbar-fixed-top navbar-inverse">
 	<div class="navbar-header">
@@ -108,150 +247,39 @@
 			</form>
 		</li>
 	</ul>
-</nav>
+</nav><!-- /global-nav -->
 
-<header class="global-header page-header container-fluid">
+<div class="attach-header container-fluid">
 	<div class="row">
-		<div class="col-sm-7 clearfix">
-			<div class="global-header__banner">
-				<a href="#"><img src="resource/image/common/60x60.png" alt="logo"></a>
-			</div>
-			<h1 class="global-header__title">mizzz</h1>
-		</div>
-
-		<div class="col-sm-5 text-right">
-			<div class="global-header__personal">
-				<a href="#" title="◯◯◯◯さんのプロフィール"><img src="resource/image/common/office-worker2.png" alt=""></a>
-				<span>◯◯◯◯さん、こんにちは</span>
-			</div>
-			<nav class="global-header__sub-nuv">
-				<ul class="list-inline list-delimiter">
-					<li><a href="#">プロジェクト設定</a></li>
-					<li><a href="#">個人設定</a></li>
-					<li><a href="#">スペース設定</a></li>
-					<li><a href="#" target="_blank">ヘルプ</a></li>
-					<li><a href="#">ログアウト</a></li>
-				</ul>
-			</nav>
-		</div>
+		<nav class="global-breadcrumb col-sm-7 clearfix">
+			<ul class="list-inline list-breadcrumb">
+				<li>
+					<img src="resource/image/common/60x60.png" alt="logo">
+					<a href="#">プロジェクト1</a>
+					<ul class="popup js-popup list-unstyled">
+						<li><a href="#">&nbsp;ホーム</a></li>
+						<li><a href="#">&nbsp;課題の検索</a></li>
+						<li><a href="#">&nbsp;課題の追加</a></li>
+					</ul>
+				</li>
+				<li>project-1 課題テスト</li>
+			</ul>
+		</nav><!-- /global-breadcrumb -->
+		<nav class="task-nav col-sm-5 clearfix">
+			<ul class="list-inline list-delimiter text-right">
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;検索に戻る</a>
+				</li>
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;課題テスト</a>
+				</li>
+				<li>
+					<a href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>&nbsp;課題テスト</a>
+				</li>
+			</ul>
+		</nav><!-- /task-nav -->
 	</div>
-</header>
-
-
-<nav class="project-nav navbar navbar-default">
-	<div class="container-fluid">
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">ホーム</a></li>
-			<li><a href="#">課題の検索</a></li>
-			<li><a href="#">課題の追加</a></li>
-		</ul>
-
-		<ul class="nav navbar-nav navbar-right">
-			<li>
-				<form class="search-keyword navbar-form" role="search">
-					<div class="form-group">
-						<label class="sr-only" for="課題を検索">課題を検索</label>
-						<div class="input-group input-group-sm input-group-long">
-							<input type="text" class="form-control" placeholder="課題を検索">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-							</span>
-						</div>
-					</div>
-				</form>
-			</li>
-		</ul>
-	</div>
-</nav>
-
-
-<main class="taskadd container-fluid">
-	<h1 class="main-header">課題の追加</h1>
-
-	<div class="message alert alert-warning" role="alert">
-		<p class="text-danger">件名は必ず入力してください。</p>
-	</div><!-- /message -->
-
-	<div class="input">
-		<form action="" method="post">
-			<div class="input__register">
-				<input class="btn btn-default" type="submit" value="プレビュー">
-				<input class="btn btn-default" type="submit" value="追加">
-			</div><!-- /input__register -->
-
-			<div class="task-card well">
-				<table class="table table-border-dotted">
-					<tbody>
-						<tr>
-							<th>* 件名</th>
-							<td><input type="text"></td>
-						</tr>
-						<tr>
-							<th>詳細</th>
-							<td><textarea rows="8" cols="100"></textarea></td>
-						</tr>
-						<tr>
-							<th colspan="2">課題の属性</th>
-						</tr>
-						<tr>
-							<table class="input__attributes table table-bordered">
-								<tbody>
-									<tr>
-										<th>* 種別</th>
-										<td>
-											<select>
-												<option value="0">対応済み</option>
-												<option value="1" selected>タスク</option>
-												<option value="2">バグ</option>
-												<option value="3">要望</option>
-												<option value="4">その他</option>
-											</select>
-										</td>
-										<th>* 優先度</th>
-										<td>
-											<select>
-												<option value="0">高</option>
-												<option value="1" selected>中</option>
-												<option value="2">低</option>
-											</select>
-										</td>
-									</tr>
-									<tr>
-										<th>カテゴリー</th>
-										<td>
-											<select>
-												<option></option>
-												<option value="0">ヘッダー</option>
-												<option value="1">カテゴリー1</option>
-												<option value="2">カテゴリー2</option>
-											</select>
-										</td>
-										<th>状態</th>
-										<td><span>新規作成</span></td>
-									</tr>
-									<tr>
-										<th>完了理由</th>
-										<td><span>-</span></td>
-										<th>期限日</th>
-										<td>
-											<input type="text">
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</tr>
-					</tbody>
-				</table>
-			</div><!-- /task-card -->
-
-			<div class="input__register">
-				<input class="btn btn-default" type="submit" value="プレビュー">
-				<input class="btn btn-default" type="submit" value="追加">
-			</div><!-- /input__register -->
-		</form>
-	</div><!-- /input -->
-</main>
-
+</div><!-- /attach-header -->
 
 <footer class="global-footer container-fluid text-center">
 	<a href="#pagetop" class="global-footer__pagetop">このページの一番上へ</a>
