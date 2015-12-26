@@ -1,0 +1,78 @@
+/* ----------------------------------------
+	課題の検索
+---------------------------------------- */
+.condition {
+	// 検索エリアヘッダー
+	&__header {
+		padding: 10px;
+		background-color: $base-highlight-color;
+	}
+
+	&__icon {
+		span {
+			display: none;
+			&.active {
+				display: inline;
+			}
+		}
+	}
+
+	// 検索エリアボディ
+	&__body {
+		padding: 10px 20px;
+		background-color: $base-bg-color;
+	}
+
+	// 検索方法
+	&__toggle {
+		text-align: right;
+		> ul {
+			display: inline-block;
+			border-bottom: none;
+			> li {
+				a {
+					border: none;
+					&:hover {
+						background-color: transparent;
+					}
+				}
+				&.active {
+					a {
+						border: none;
+						border-radius: inherit;
+						background-color: $base-highlight-color;
+					}
+				}
+			}
+		}
+	}
+
+	&__simple {
+		table {
+			th {
+				width: 10%;
+			}
+		}
+	}
+
+	&__advanced {
+		> .nav {
+			a {
+				padding-left: 80px;
+				padding-right: 80px;
+			}
+		}
+
+		> .tab-content {
+			padding: 10px;
+			border: 5px solid #ddd;
+		}
+	}
+}
+
+/* ----------------------------------------
+	検索結果
+---------------------------------------- */
+.result {
+	margin-top: 20px;
+}

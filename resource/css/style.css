@@ -94,8 +94,15 @@
 /* ----------------------------------------
 	テーブル
 ---------------------------------------- */
+/* ドットボーダー */
 .table-border-dotted > tbody > tr td {
   border-top-style: dotted;
+}
+
+/* ボーダーなし */
+.table-noborder > tbody > tr th,
+.table-noborder > tbody > tr td {
+  border: none;
 }
 
 /* ----------------------------------------
@@ -146,6 +153,10 @@ textarea {
   border-width: 1px;
   border-style: solid;
   border-color: #aaa;
+}
+
+.table {
+  margin-bottom: 0;
 }
 
 /* ----------------------------------------
@@ -365,7 +376,7 @@ main .main-header {
 .projects .tasklist__header {
   margin-bottom: 0;
   padding: 10px;
-  background-color: #eee !important;
+  background-color: #ddd;
   font-size: 16px;
 }
 .projects .tasklist__title {
@@ -1318,6 +1329,16 @@ main .main-header {
   	検索結果
   ---------------------------------------- */
 }
+.find .condition__header {
+  padding: 10px;
+  background-color: #ddd;
+}
+.find .condition__icon span {
+  display: none;
+}
+.find .condition__icon span.active {
+  display: inline;
+}
 .find .condition__body {
   padding: 10px 20px;
   background-color: #f3f3f3;
@@ -1339,6 +1360,20 @@ main .main-header {
   border: none;
   border-radius: inherit;
   background-color: #ddd;
+}
+.find .condition__simple table th {
+  width: 10%;
+}
+.find .condition__advanced > .nav a {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.find .condition__advanced > .tab-content {
+  padding: 10px;
+  border: 5px solid #ddd;
+}
+.find .result {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

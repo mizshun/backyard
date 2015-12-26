@@ -101,15 +101,27 @@
 	}
 }
 
-
 /* ----------------------------------------
 	テーブル
 ---------------------------------------- */
+/* ドットボーダー */
 .table-border-dotted {
 	> tbody {
 		> tr {
 			td {
 				border-top-style: dotted;
+			}
+		}
+	}
+}
+
+/* ボーダーなし */
+.table-noborder {
+	> tbody {
+		> tr {
+			th,
+			td {
+				border: none;
 			}
 		}
 	}
