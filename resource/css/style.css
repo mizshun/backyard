@@ -29,10 +29,24 @@
 /* 追加読み込みボタン */
 .seeall {
   padding: 10px;
-  background-color: #eee;
+  background-color: #ddd;
 }
 .seeall:hover {
-  background-color: #e1e1e1;
+  background-color: #d0d0d0;
+}
+
+/* ボタングループ(横並び) */
+.btn-group-horizontal {
+  text-align: right;
+}
+.btn-group-horizontal > input {
+  width: 180px;
+}
+.btn-group-horizontal--separate *:nth-of-type(1) {
+  float: left;
+}
+.btn-group-horizontal--separate *:nth-of-type(2) {
+  float: right;
 }
 
 /* ----------------------------------------
@@ -45,7 +59,7 @@
   padding: 5px 10px;
 }
 .panel-body-list > ul > li > a:hover {
-  background-color: #eee;
+  background-color: #ddd;
 }
 
 /* インラインのリストアイテムに区切り棒を挿入する */
@@ -160,7 +174,7 @@ body {
   color: #fff;
 }
 .global-nav .dropdown-menu-list > li > a:hover {
-  background-color: #eee;
+  background-color: #ddd;
   color: #3c3c3c;
 }
 
@@ -200,7 +214,7 @@ body {
   padding-top: 5px;
   padding-bottom: 5px;
   border-bottom: 1px solid #aaa;
-  background-color: #eee;
+  background-color: #f3f3f3;
   z-index: 999;
 }
 .attach-header .global-breadcrumb ul {
@@ -231,7 +245,7 @@ body {
   text-align: center;
 }
 .project-nav .navbar-nav:first-child > li > a:hover {
-  background-color: #eee;
+  background-color: #ddd;
 }
 
 /* ----------------------------------------
@@ -435,7 +449,7 @@ main .main-header {
 }
 .task .comment__header {
   padding: 10px;
-  background-color: #eee;
+  background-color: #f3f3f3;
 }
 .task .comment__title {
   font-size: 16px;
@@ -450,14 +464,14 @@ main .main-header {
 .task .comment__item--minimum {
   position: relative;
   margin-top: 20px;
-  border-top: 1px solid #d4d4d4;
-  background-color: #eee;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
   text-align: center;
 }
 .task .comment__item--minimum > * {
   display: block;
-  border-top: 1px solid #d4d4d4;
-  background-color: #eee;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
 }
 .task .comment__item--minimum::before, .task .comment__item--minimum::after {
   content: "";
@@ -465,8 +479,8 @@ main .main-header {
   left: 0;
   width: 100%;
   height: 10px;
-  border-top: 1px solid #d4d4d4;
-  background-color: #eee;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
 }
 .task .comment__item--minimum::before {
   top: -10px;
@@ -483,8 +497,8 @@ main .main-header {
 }
 .task .comment__item-header {
   padding: 10px;
-  border-top: 2px solid #d4d4d4;
-  background-color: #eee;
+  border-top: 2px solid #d9d9d9;
+  background-color: #f3f3f3;
 }
 .task .comment__item-header > * {
   display: inline-block;
@@ -565,7 +579,7 @@ main .main-header {
 .task .input__status {
   margin: -10px -25px 0;
   padding: 10px 25px 25px;
-  background-color: #eee;
+  background-color: #f3f3f3;
 }
 .task .input__status-switch {
   text-align: right;
@@ -599,12 +613,8 @@ main .main-header {
 .task .input__comment textarea {
   width: 100%;
 }
-.task .input__register {
+.task .input .btn-group-horizontal {
   margin-top: 20px;
-  text-align: center;
-}
-.task .input__register > input {
-  width: 180px;
 }
 .task .update-status__status-body div:first-child > label {
   display: block;
@@ -641,12 +651,6 @@ main .main-header {
 .task .update-status__comment textarea {
   width: 100%;
 }
-.task .update-status__register {
-  text-align: center;
-}
-.task .update-status__register > input {
-  width: 180px;
-}
 
 /* 課題の追加 */
 .taskadd {
@@ -654,15 +658,6 @@ main .main-header {
   	課題の表示
   ---------------------------------------- */
   /* 入力フォーム */
-}
-.taskadd .input__register {
-  text-align: right;
-}
-.taskadd .input__register > input {
-  width: 180px;
-}
-.taskadd .input__register:nth-of-type(1) {
-  margin-bottom: 20px;
 }
 .taskadd .input .task-card > table > tbody > tr:first-child th,
 .taskadd .input .task-card > table > tbody > tr:first-child td {
@@ -672,6 +667,9 @@ main .main-header {
 .taskadd .input .task-card > table textarea {
   width: 100%;
 }
+.taskadd .input .btn-group-horizontal:nth-of-type(1) {
+  margin-bottom: 20px;
+}
 .taskadd .input__attributes th {
   width: 10%;
 }
@@ -680,6 +678,667 @@ main .main-header {
 }
 .taskadd .input__attributes select {
   width: 200px;
+}
+.taskadd .input__attributes p {
+  margin-top: 5px;
+}
+.taskadd .input__comment {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+.taskadd .input__comment label {
+  display: block;
+}
+.taskadd .input__comment input[type=text],
+.taskadd .input__comment textarea {
+  width: 100%;
+}
+
+/* 課題の追加(プレビュー) */
+.taskaddpreview {
+  /* ----------------------------------------
+  	課題の表示
+  ---------------------------------------- */
+  /* 課題 */
+  /* コメント */
+  /* コメントの編集 */
+  /* 状態の更新 */
+  /* ----------------------------------------
+  	課題の表示
+  ---------------------------------------- */
+  /* 確認メッセージ */
+  /* 入力フォーム */
+}
+.taskaddpreview .task-card > * + * {
+  margin-top: 15px;
+  padding: 15px 10px 0;
+  border-top: 1px solid #aaa;
+}
+.taskaddpreview .task-card__title {
+  margin-top: 15px;
+  padding: 15px 10px 0;
+  border-top: 1px solid #aaa;
+  font-size: 20px;
+}
+.taskaddpreview .task-card__attributes table {
+  width: 100%;
+}
+.taskaddpreview .task-card__attributes table th, .taskaddpreview .task-card__attributes table td {
+  width: 20%;
+  padding: 10px 0;
+}
+.taskaddpreview .task-card__attributes table th {
+  width: 10%;
+}
+.taskaddpreview .task-card__attributes table tr + tr th, .taskaddpreview .task-card__attributes table tr + tr td {
+  border-top: 1px dotted #aaa;
+}
+.taskaddpreview .task-card__detail-header > * {
+  display: inline-block;
+}
+.taskaddpreview .task-card__detail-title {
+  margin-right: 10px;
+  font-size: 16px;
+  vertical-align: top;
+}
+.taskaddpreview .task-card__detail-user img {
+  max-width: 32px;
+  height: auto;
+  margin-right: 5px;
+}
+.taskaddpreview .task-card__detail-body {
+  margin-top: 10px;
+  margin-left: 42px;
+}
+.taskaddpreview .task-card__attach-title {
+  font-size: 16px;
+}
+.taskaddpreview .task-card__attach-body {
+  margin-top: 10px;
+  margin-left: 42px;
+}
+.taskaddpreview .comment {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #aaa;
+}
+.taskaddpreview .comment__header {
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+.taskaddpreview .comment__title {
+  font-size: 16px;
+}
+.taskaddpreview .comment__disp {
+  margin-bottom: 0;
+}
+.taskaddpreview .comment__control {
+  margin: 10px 0;
+  text-align: right;
+}
+.taskaddpreview .comment__item--minimum {
+  position: relative;
+  margin-top: 20px;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+.taskaddpreview .comment__item--minimum > * {
+  display: block;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
+}
+.taskaddpreview .comment__item--minimum::before, .taskaddpreview .comment__item--minimum::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
+}
+.taskaddpreview .comment__item--minimum::before {
+  top: -10px;
+  z-index: -1;
+}
+.taskaddpreview .comment__item--minimum::after {
+  top: -5px;
+  z-index: 1;
+}
+.taskaddpreview .comment__item--minimum-count {
+  position: relative;
+  padding: 5px 0;
+  z-index: 2;
+}
+.taskaddpreview .comment__item-header {
+  padding: 10px;
+  border-top: 2px solid #d9d9d9;
+  background-color: #f3f3f3;
+}
+.taskaddpreview .comment__item-header > * {
+  display: inline-block;
+}
+.taskaddpreview .comment__item-header > *:nth-child(1) {
+  width: 69%;
+}
+.taskaddpreview .comment__item-header > *:nth-child(1) > * {
+  display: inline;
+}
+.taskaddpreview .comment__item-header > *:nth-child(2) {
+  width: 30%;
+}
+.taskaddpreview .comment__item-header--overview {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.taskaddpreview .comment__item-header--overview > * {
+  display: inline;
+  width: auto;
+}
+.taskaddpreview .comment__item-title {
+  font-size: 16px;
+}
+.taskaddpreview .comment__item-user img {
+  max-width: 24px;
+  height: auto;
+}
+.taskaddpreview .comment__item-control {
+  margin-bottom: 0;
+  text-align: right;
+}
+.taskaddpreview .comment__item-control > li {
+  position: relative;
+  text-align: left;
+}
+.taskaddpreview .comment__item-control > li .popup {
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.taskaddpreview .comment__item-body {
+  margin: 15px 30px 30px;
+}
+.taskaddpreview .comment__item-comment label {
+  display: block;
+}
+.taskaddpreview .comment__item-comment input[type=text],
+.taskaddpreview .comment__item-comment textarea {
+  width: 100%;
+}
+.taskaddpreview .comment__item-register {
+  margin-top: 10px;
+  text-align: center;
+}
+.taskaddpreview .comment__item-register > * {
+  margin: 0 5px;
+}
+.taskaddpreview .comment__item-register > input {
+  width: 180px;
+}
+.taskaddpreview .input__title {
+  display: none;
+}
+.taskaddpreview .input__tab {
+  border-bottom-width: 5px;
+}
+.taskaddpreview .input__tab > li {
+  margin-bottom: -5px;
+}
+.taskaddpreview .input__edit {
+  padding: 10px 25px 25px;
+  border: 2px solid #ddd;
+  border-top: none;
+}
+.taskaddpreview .input__status {
+  margin: -10px -25px 0;
+  padding: 10px 25px 25px;
+  background-color: #f3f3f3;
+}
+.taskaddpreview .input__status-switch {
+  text-align: right;
+}
+.taskaddpreview .input__status-body {
+  margin-top: 10px;
+}
+.taskaddpreview .input__status-left {
+  float: left;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.taskaddpreview .input__status-left > label {
+  display: block;
+}
+.taskaddpreview .input__status-right {
+  float: right;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.taskaddpreview .input__status-bottom {
+  clear: both;
+}
+.taskaddpreview .input__comment {
+  padding-top: 20px;
+}
+.taskaddpreview .input__comment label {
+  display: block;
+}
+.taskaddpreview .input__comment input[type=text],
+.taskaddpreview .input__comment textarea {
+  width: 100%;
+}
+.taskaddpreview .input .btn-group-horizontal {
+  margin-top: 20px;
+}
+.taskaddpreview .update-status__status-body div:first-child > label {
+  display: block;
+}
+.taskaddpreview .update-status__status-body > table {
+  width: 100%;
+  margin-top: 10px;
+}
+.taskaddpreview .update-status__status-body > table td:first-child {
+  width: 40%;
+}
+.taskaddpreview .update-status__status-body > table select {
+  width: 100%;
+}
+.taskaddpreview .update-status__status-body > table + div > label {
+  width: 40%;
+}
+.taskaddpreview .update-status__status-body > table + div > input {
+  width: 60%;
+}
+.taskaddpreview .update-status__status-current {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+.taskaddpreview .update-status__comment {
+  margin-top: 10px;
+}
+.taskaddpreview .update-status__comment label {
+  display: block;
+}
+.taskaddpreview .update-status__comment input[type=text],
+.taskaddpreview .update-status__comment textarea {
+  width: 100%;
+}
+.taskaddpreview .leadmsg {
+  font-size: 16px;
+  font-weight: bold;
+}
+.taskaddpreview .input .btn-group-horizontal:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+
+/* 課題の追加(完了) */
+.taskaddcomplete {
+  /* ----------------------------------------
+  	課題の表示
+  ---------------------------------------- */
+  /* 課題 */
+  /* コメント */
+  /* コメントの編集 */
+  /* 状態の更新 */
+  /* ----------------------------------------
+  	課題の追加(完了)
+  ---------------------------------------- */
+}
+.taskaddcomplete .task-card > * + * {
+  margin-top: 15px;
+  padding: 15px 10px 0;
+  border-top: 1px solid #aaa;
+}
+.taskaddcomplete .task-card__title {
+  margin-top: 15px;
+  padding: 15px 10px 0;
+  border-top: 1px solid #aaa;
+  font-size: 20px;
+}
+.taskaddcomplete .task-card__attributes table {
+  width: 100%;
+}
+.taskaddcomplete .task-card__attributes table th, .taskaddcomplete .task-card__attributes table td {
+  width: 20%;
+  padding: 10px 0;
+}
+.taskaddcomplete .task-card__attributes table th {
+  width: 10%;
+}
+.taskaddcomplete .task-card__attributes table tr + tr th, .taskaddcomplete .task-card__attributes table tr + tr td {
+  border-top: 1px dotted #aaa;
+}
+.taskaddcomplete .task-card__detail-header > * {
+  display: inline-block;
+}
+.taskaddcomplete .task-card__detail-title {
+  margin-right: 10px;
+  font-size: 16px;
+  vertical-align: top;
+}
+.taskaddcomplete .task-card__detail-user img {
+  max-width: 32px;
+  height: auto;
+  margin-right: 5px;
+}
+.taskaddcomplete .task-card__detail-body {
+  margin-top: 10px;
+  margin-left: 42px;
+}
+.taskaddcomplete .task-card__attach-title {
+  font-size: 16px;
+}
+.taskaddcomplete .task-card__attach-body {
+  margin-top: 10px;
+  margin-left: 42px;
+}
+.taskaddcomplete .comment {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #aaa;
+}
+.taskaddcomplete .comment__header {
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+.taskaddcomplete .comment__title {
+  font-size: 16px;
+}
+.taskaddcomplete .comment__disp {
+  margin-bottom: 0;
+}
+.taskaddcomplete .comment__control {
+  margin: 10px 0;
+  text-align: right;
+}
+.taskaddcomplete .comment__item--minimum {
+  position: relative;
+  margin-top: 20px;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
+  text-align: center;
+}
+.taskaddcomplete .comment__item--minimum > * {
+  display: block;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
+}
+.taskaddcomplete .comment__item--minimum::before, .taskaddcomplete .comment__item--minimum::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  border-top: 1px solid #d9d9d9;
+  background-color: #f3f3f3;
+}
+.taskaddcomplete .comment__item--minimum::before {
+  top: -10px;
+  z-index: -1;
+}
+.taskaddcomplete .comment__item--minimum::after {
+  top: -5px;
+  z-index: 1;
+}
+.taskaddcomplete .comment__item--minimum-count {
+  position: relative;
+  padding: 5px 0;
+  z-index: 2;
+}
+.taskaddcomplete .comment__item-header {
+  padding: 10px;
+  border-top: 2px solid #d9d9d9;
+  background-color: #f3f3f3;
+}
+.taskaddcomplete .comment__item-header > * {
+  display: inline-block;
+}
+.taskaddcomplete .comment__item-header > *:nth-child(1) {
+  width: 69%;
+}
+.taskaddcomplete .comment__item-header > *:nth-child(1) > * {
+  display: inline;
+}
+.taskaddcomplete .comment__item-header > *:nth-child(2) {
+  width: 30%;
+}
+.taskaddcomplete .comment__item-header--overview {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.taskaddcomplete .comment__item-header--overview > * {
+  display: inline;
+  width: auto;
+}
+.taskaddcomplete .comment__item-title {
+  font-size: 16px;
+}
+.taskaddcomplete .comment__item-user img {
+  max-width: 24px;
+  height: auto;
+}
+.taskaddcomplete .comment__item-control {
+  margin-bottom: 0;
+  text-align: right;
+}
+.taskaddcomplete .comment__item-control > li {
+  position: relative;
+  text-align: left;
+}
+.taskaddcomplete .comment__item-control > li .popup {
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.taskaddcomplete .comment__item-body {
+  margin: 15px 30px 30px;
+}
+.taskaddcomplete .comment__item-comment label {
+  display: block;
+}
+.taskaddcomplete .comment__item-comment input[type=text],
+.taskaddcomplete .comment__item-comment textarea {
+  width: 100%;
+}
+.taskaddcomplete .comment__item-register {
+  margin-top: 10px;
+  text-align: center;
+}
+.taskaddcomplete .comment__item-register > * {
+  margin: 0 5px;
+}
+.taskaddcomplete .comment__item-register > input {
+  width: 180px;
+}
+.taskaddcomplete .input__title {
+  display: none;
+}
+.taskaddcomplete .input__tab {
+  border-bottom-width: 5px;
+}
+.taskaddcomplete .input__tab > li {
+  margin-bottom: -5px;
+}
+.taskaddcomplete .input__edit {
+  padding: 10px 25px 25px;
+  border: 2px solid #ddd;
+  border-top: none;
+}
+.taskaddcomplete .input__status {
+  margin: -10px -25px 0;
+  padding: 10px 25px 25px;
+  background-color: #f3f3f3;
+}
+.taskaddcomplete .input__status-switch {
+  text-align: right;
+}
+.taskaddcomplete .input__status-body {
+  margin-top: 10px;
+}
+.taskaddcomplete .input__status-left {
+  float: left;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.taskaddcomplete .input__status-left > label {
+  display: block;
+}
+.taskaddcomplete .input__status-right {
+  float: right;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.taskaddcomplete .input__status-bottom {
+  clear: both;
+}
+.taskaddcomplete .input__comment {
+  padding-top: 20px;
+}
+.taskaddcomplete .input__comment label {
+  display: block;
+}
+.taskaddcomplete .input__comment input[type=text],
+.taskaddcomplete .input__comment textarea {
+  width: 100%;
+}
+.taskaddcomplete .input .btn-group-horizontal {
+  margin-top: 20px;
+}
+.taskaddcomplete .update-status__status-body div:first-child > label {
+  display: block;
+}
+.taskaddcomplete .update-status__status-body > table {
+  width: 100%;
+  margin-top: 10px;
+}
+.taskaddcomplete .update-status__status-body > table td:first-child {
+  width: 40%;
+}
+.taskaddcomplete .update-status__status-body > table select {
+  width: 100%;
+}
+.taskaddcomplete .update-status__status-body > table + div > label {
+  width: 40%;
+}
+.taskaddcomplete .update-status__status-body > table + div > input {
+  width: 60%;
+}
+.taskaddcomplete .update-status__status-current {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+.taskaddcomplete .update-status__comment {
+  margin-top: 10px;
+}
+.taskaddcomplete .update-status__comment label {
+  display: block;
+}
+.taskaddcomplete .update-status__comment input[type=text],
+.taskaddcomplete .update-status__comment textarea {
+  width: 100%;
+}
+.taskaddcomplete .completion {
+  padding: 30px;
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+  background-color: #f3f3f3;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.taskaddcomplete .btn-group-horizontal {
+  text-align: center;
+}
+
+/* 課題の編集 */
+.taskedit {
+  /* ----------------------------------------
+  	課題の表示
+  ---------------------------------------- */
+  /* 入力フォーム */
+  /* ----------------------------------------
+  	課題の編集
+  ---------------------------------------- */
+}
+.taskedit .input .task-card > table > tbody > tr:first-child th,
+.taskedit .input .task-card > table > tbody > tr:first-child td {
+  border-top: none;
+}
+.taskedit .input .task-card > table input,
+.taskedit .input .task-card > table textarea {
+  width: 100%;
+}
+.taskedit .input .btn-group-horizontal:nth-of-type(1) {
+  margin-bottom: 20px;
+}
+.taskedit .input__attributes th {
+  width: 10%;
+}
+.taskedit .input__attributes td {
+  background-color: #fff;
+}
+.taskedit .input__attributes select {
+  width: 200px;
+}
+.taskedit .input__attributes p {
+  margin-top: 5px;
+}
+.taskedit .input__comment {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+.taskedit .input__comment label {
+  display: block;
+}
+.taskedit .input__comment input[type=text],
+.taskedit .input__comment textarea {
+  width: 100%;
+}
+.taskedit .back {
+  margin-bottom: 20px;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #aaa;
+}
+
+/* 課題の検索 */
+.find {
+  /* ----------------------------------------
+  	課題の検索
+  ---------------------------------------- */
+  /* ----------------------------------------
+  	検索結果
+  ---------------------------------------- */
+}
+.find .condition__body {
+  padding: 10px 20px;
+  background-color: #f3f3f3;
+}
+.find .condition__toggle {
+  text-align: right;
+}
+.find .condition__toggle > ul {
+  display: inline-block;
+  border-bottom: none;
+}
+.find .condition__toggle > ul > li a {
+  border: none;
+}
+.find .condition__toggle > ul > li a:hover {
+  background-color: transparent;
+}
+.find .condition__toggle > ul > li.active a {
+  border: none;
+  border-radius: inherit;
+  background-color: #ddd;
 }
 
 /*# sourceMappingURL=style.css.map */

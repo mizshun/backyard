@@ -22,3 +22,26 @@
 .taskadd {
 	@import "../page/taskadd";
 }
+
+/* 課題の追加(プレビュー) */
+.taskaddpreview {
+	@import "../page/task";
+	@import "../page/taskaddpreview";
+}
+
+/* 課題の追加(完了) */
+.taskaddcomplete {
+	@import "../page/task";
+	@import "../page/taskaddcomplete";
+ }
+
+/* 課題の編集 */
+.taskedit {
+	@import "../page/taskadd";
+	@import "../page/taskedit";
+}
+
+/* 課題の検索 */
+.find {
+	@import "../page/find";
+}

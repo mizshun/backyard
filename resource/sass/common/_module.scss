@@ -28,6 +28,23 @@
 	}
 }
 
+/* ボタングループ(横並び) */
+.btn-group-horizontal {
+	text-align: right;
+	> input {
+		@include btn-fixed-width();
+	}
+	// Modifier
+	&--separate {
+		*:nth-of-type(1) {
+			float: left;
+		}
+		*:nth-of-type(2) {
+			float: right;
+		}
+	}
+}
+
 /* ----------------------------------------
 	リスト
 ---------------------------------------- */

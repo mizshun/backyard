@@ -259,13 +259,8 @@
 		padding-top: 20px;
 		@include vertical-form-item();
 	}
-	// 登録ボタン
-	&__register {
+	.btn-group-horizontal {
 		margin-top: 20px;
-		text-align: center;
-		> input {
-			@include btn-fixed-width();
-		}
 	}
 }
 
@@ -308,11 +303,5 @@
 	&__comment {
 		margin-top: 10px;
 		@include vertical-form-item();
-	}
-	&__register {
-		text-align: center;
-		> input {
-			@include btn-fixed-width();
-		}
 	}
 }

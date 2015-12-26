@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プロジェクト1(project) | 課題の追加 - Backyard</title>
+<title>[project] プロジェクト1 | 課題の編集 - Backyard</title>
 <link rel="stylesheet" href="./resource/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="resource/css/style.css">
@@ -68,17 +68,20 @@
 	</div>
 </nav><!-- /prohect-nav-->
 
-<main class="taskadd container-fluid">
+<main class="taskedit container-fluid">
 	<h1 class="main-header">課題の追加</h1>
 
 	<div class="message alert alert-warning" role="alert">
 		<p class="text-danger">件名は必ず入力してください。</p>
 	</div><!-- /message -->
 
+	<div class="back">
+		<a href="#"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;戻る</a>
+	</div>
+
 	<div class="input">
 		<form action="" method="post">
 			<div class="btn-group-horizontal">
-				<input class="btn btn-default" type="submit" value="プレビュー">
 				<input class="btn btn-default" type="submit" value="追加">
 			</div><!-- /btn-group-horizontal -->
 
@@ -87,11 +90,11 @@
 					<tbody>
 						<tr>
 							<th>* 件名</th>
-							<td><input type="text"></td>
+							<td><input type="text" value="課題テスト"></td>
 						</tr>
 						<tr>
 							<th>詳細</th>
-							<td><textarea rows="8" cols="100"></textarea></td>
+							<td><textarea rows="8" cols="100">これは課題テスト詳細の本文です。これは課題テスト詳細の本文です。</textarea></td>
 						</tr>
 						<tr>
 							<th colspan="2">課題の属性</th>
@@ -124,20 +127,20 @@
 										<td>
 											<select>
 												<option></option>
-												<option value="0">ヘッダー</option>
+												<option value="0" selected>ヘッダー</option>
 												<option value="1">カテゴリー1</option>
 												<option value="2">カテゴリー2</option>
 											</select>
 										</td>
 										<th>状態</th>
-										<td><span>新規作成</span></td>
+										<td><span>処理中</span></td>
 									</tr>
 									<tr>
 										<th>完了理由</th>
-										<td><span>-</span></td>
+										<td><span>対応済み</span></td>
 										<th>期限日</th>
 										<td>
-											<input type="text">
+											<input type="text" value="2015/12/31">
 											<p><span>YYYY/MM/DDで入力してください。<br>例：2005/06/01</span></p>
 										</td>
 									</tr>
@@ -148,8 +151,13 @@
 				</table>
 			</div><!-- /task-card -->
 
-			<div class="btn-group-horizontal">
-				<input class="btn btn-default" type="submit" value="プレビュー">
+			<div class="input__comment">
+				<label for="input__comment">コメント</label>
+				<textarea id="input__comment" name="comment" rows="8" cols="100"></textarea>
+			</div><!-- /input__comment -->
+
+			<div class="btn-group-horizontal btn-group-horizontal--separate clearfix">
+				<input class="btn btn-default" type="submit" value="この課題を削除する">
 				<input class="btn btn-default" type="submit" value="追加">
 			</div><!-- /btn-group-horizontal -->
 		</form>
