@@ -201,73 +201,148 @@
 					</ul>
 				</div><!-- /condition__toggle -->
 
-				<!-- シンプルな検索 -->
-				<div class="tab-content">
-					<div role="tabpanel" class="condition__simple tab-pane fade active in" id="js-cond-simple">
-						<form action="" method="get">
-							<table class="table table-noborder">
-								<tbody>
-									<tr>
-										<th>状態</th>
-										<td class="condition__status">
-											<a href="#">すべて</a>&nbsp;|&nbsp;
-											<a href="#">未対応</a>&nbsp;|&nbsp;
-											<a href="#">処理中</a>&nbsp;|&nbsp;
-											<a href="#">処理済み</a>&nbsp;|&nbsp;
-											<a href="#">完了</a>&nbsp;|&nbsp;
-											<a href="#">完了以外</a>
-										</td>
-									</tr>
-									<tr>
-										<th>カテゴリー</th>
-										<td class="condition__category">
-											<a href="#">すべて</a>&nbsp;|&nbsp;
-											<a href="#">未設定</a>&nbsp;|&nbsp;
-											<a href="#">カテゴリー1</a>&nbsp;|&nbsp;
-											<a href="#">カテゴリー2</a>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</form>
-					</div><!-- /シンプルな検索 -->
-
-					<!-- 高度な検索 -->
-					<div role="tabpanel" class="condition__advanced tab-pane fade in" id="js-cond-advanced">
-						<ul class="nav nav-tabs">
-							<li role="presentation" class="active">
-								<a href="#js-cond-basic" aria-controls="edit" role="tab" data-toggle="tab" aria-expanded="true">基本</a>
-							</li>
-							<li role="presentation" class="">
-								<a href="#js-cond-date" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false">日付</a>
-							</li>
-						</ul>
-
-						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane fade active in" id="js-cond-basic">
-								Basic
-							</div>
-							<div role="tabpanel" class="tab-pane fade in" id="js-cond-date">
+				<form action="" method="get">
+					<!-- シンプルな検索 -->
+					<div class="tab-content">
+							<div role="tabpanel" class="condition__simple tab-pane fade active in" id="js-cond-simple">
 								<table class="table table-noborder">
 									<tbody>
 										<tr>
-											<th>登録日</th>
-											<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
+											<th>状態</th>
+											<td class="condition__status">
+												<a href="#">すべて</a>&nbsp;|&nbsp;
+												<a href="#">未対応</a>&nbsp;|&nbsp;
+												<a href="#">処理中</a>&nbsp;|&nbsp;
+												<a href="#">処理済み</a>&nbsp;|&nbsp;
+												<a href="#">完了</a>&nbsp;|&nbsp;
+												<a href="#">完了以外</a>
+											</td>
 										</tr>
 										<tr>
-											<th>更新日</th>
-											<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
-										</tr>
-										<tr>
-											<th>期限日</th>
-											<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text">&nbsp;&nbsp;&nbsp;&nbsp;※YYYY/MM/DDで入力してください。</td>
+											<th>カテゴリー</th>
+											<td class="condition__category">
+												<a href="#">すべて</a>&nbsp;|&nbsp;
+												<a href="#">未設定</a>&nbsp;|&nbsp;
+												<a href="#">カテゴリー1</a>&nbsp;|&nbsp;
+												<a href="#">カテゴリー2</a>
+											</td>
 										</tr>
 									</tbody>
 								</table>
-							</div>
-						</div>
-					</div><!-- /高度な検索 -->
-				</div>
+							</div><!-- /シンプルな検索 -->
+
+							<!-- 高度な検索 -->
+							<div role="tabpanel" class="condition__advanced tab-pane fade in" id="js-cond-advanced">
+								<ul class="nav nav-tabs">
+									<li role="presentation" class="active">
+										<a href="#js-cond-basic" aria-controls="edit" role="tab" data-toggle="tab" aria-expanded="true">基本</a>
+									</li>
+									<li role="presentation" class="">
+										<a href="#js-cond-date" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false">日付</a>
+									</li>
+								</ul>
+
+								<div class="tab-content">
+									<div role="tabpanel" class="condition__basic tab-pane fade active in" id="js-cond-basic">
+										<table class="table table-noborder">
+											<tbody>
+												<tr>
+													<th>状態 <span class="pull-right"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<a href="#">完了以外</a></span></th>
+													<th>カテゴリー</th>
+													<th>種別</th>
+													<th>優先度</th>
+													<th>完了理由</th>
+												</tr>
+												<tr>
+													<td>
+														<select name="" size="5" multiple="true">
+															<option value="">&nbsp;</option>
+															<option value="">未対応</option>
+															<option value="">処理中</option>
+															<option value="">処理済み</option>
+															<option value="">完了</option>
+														</select>
+													</td>
+													<td>
+														<select name="" size="5" multiple="true">
+															<option value="">&nbsp;</option>
+															<option value="">未設定</option>
+															<option value="">ヘッダー</option>
+															<option value="">追加カテゴリー1</option>
+															<option value="">追加カテゴリー2</option>
+														</select>
+													</td>
+													<td>
+														<select name="" size="5" multiple="true">
+															<option value="">&nbsp;</option>
+															<option value="">タスク</option>
+															<option value="">バグ</option>
+															<option value="">要望</option>
+															<option value="">その他</option>
+														</select>
+													</td>
+													<td>
+														<select name="" size="5" multiple="true">
+															<option value="">&nbsp;</option>
+															<option value="">高</option>
+															<option value="">中</option>
+															<option value="">低</option>
+														</select>
+													</td>
+													<td>
+														<select name="" size="5" multiple="true">
+															<option value="">&nbsp;</option>
+															<option value="">未設定</option>
+															<option value="">対応済み</option>
+															<option value="">対応しない</option>
+															<option value="">無効</option>
+															<option value="">重複</option>
+															<option value="">再現しない</option>
+														</select>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div><!-- /condition__date -->
+
+									<div role="tabpanel" class="condition__date tab-pane fade in" id="js-cond-date">
+										<table class="table table-noborder">
+											<tbody>
+												<tr>
+													<th>登録日</th>
+													<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
+												</tr>
+												<tr>
+													<th>更新日</th>
+													<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
+												</tr>
+												<tr>
+													<th>期限日</th>
+													<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text">&nbsp;&nbsp;&nbsp;&nbsp;※YYYY/MM/DDで入力してください。</td>
+												</tr>
+											</tbody>
+										</table>
+									</div><!-- /condition__date -->
+								</div><!-- /tab-content -->
+							</div><!-- /高度な検索 -->
+					</div><!-- /tab-content -->
+
+					<div class="condition__keyword">
+						<table class="table table-noborder">
+							<tbody>
+								<tr>
+									<th>キーワード</th>
+									<td><input type="text"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div><!-- /condition__keyword -->
+
+					<div class="condition__btn btn-group-horizontal">
+						<a href="#">検索条件をクリアする</a>
+						<input class="btn btn-default" type="submit" value="この条件で検索">
+					</div>
+				</form>
 			</div><!-- /$condition__body -->
 		</div><!-- /conditon -->
 
@@ -281,7 +356,7 @@
 <footer class="global-footer container-fluid text-center">
 	<a href="#pagetop" class="global-footer__pagetop">このページの一番上へ</a>
 	<p class="global-footer__copyright"><small>Backyard Copyright ©2015-2016 by <site><a href="#">mizzz</a></site> All rights reserved.</small><br>
-		<small>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></small>
+		<small>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></small>
 	</p>
 </footer>
 
