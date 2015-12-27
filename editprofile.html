@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プロジェクト(project) | 課題の追加 - Backyard</title>
+<title>プロジェクト1(project) | 課題の検索 - Backyard</title>
 <link rel="stylesheet" href="./resource/css/bootstrap.min.css">
 <link rel="stylesheet" href="./resource/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="resource/css/style.css">
@@ -14,6 +14,7 @@
 <![endif]-->
 </head>
 <body>
+
 
 <header class="global-header page-header container-fluid">
 	<div class="row">
@@ -42,6 +43,7 @@
 	</div>
 </header>
 
+
 <nav class="project-nav navbar navbar-default">
 	<div class="container-fluid">
 		<ul class="nav navbar-nav">
@@ -68,21 +70,58 @@
 	</div>
 </nav>
 
-<main class="taskaddcomplete container-fluid">
-	<div class="primary">
-		<h1 class="header-stl-bdr">課題の追加</h1>
 
-		<div class="completion">
-			<p>課題を追加しました。</p>
-			<a href="/view/project-8">project-1</a>
-		</div>
+<main class="editprofile container-fluid">
+	<h1 class="header-stl-bdr">個人設定</h1>
+	<p>あなた自身の設定を行います</p>
 
-		<div class="btn-group-horizontal">
-			<input class="btn btn-default" type="submit" value="続けて課題を追加する">
-		</div><!-- /btn-group-horizontal -->
+	<div class="profile clearfix">
+		<ul class="profile__menu nav nav-tabs">
+			<li role="presentation" class="active">
+				<a href="#js-editprofile" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false">ユーザー情報</a>
+			</li>
+			<li role="presentation" class="">
+				<a href="#js-editpassword" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false">パスワード</a>
+			</li>
+		</ul>
 
-	</div><!-- /primary -->
+		<div class="profile__content tab-content">
+			<div role="tabpanel" class="panel-editprofile tab-pane fade in active" id="js-editprofile">
+				<h2 class="header-stl-bdr">ユーザ情報の変更</h2>
+				<table class="table table-noborder">
+					<tbody>
+						<tr>
+							<th></th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- /editpassword -->
+
+			<div role="tabpanel" class="panel-editpassword tab-pane fade in" id="js-editpassword">
+				<h2 class="header-stl-bdr">パスワードの変更</h2>
+				<table class="table table-noborder">
+					<tbody>
+						<tr>
+							<th></th>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div><!-- /editpassword -->
+
+		</div><!-- /tab-content -->
+	</div>
 </main>
+
+
+<footer class="global-footer container-fluid text-center">
+	<a href="#pagetop" class="global-footer__pagetop">このページの一番上へ</a>
+	<p class="global-footer__copyright"><small>Backyard Copyright ©2015-2016 by <site><a href="#">mizzz</a></site> All rights reserved.</small><br>
+		<small>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></small>
+	</p>
+</footer>
+
 
 <nav class="global-nav container-fluid navbar navbar-default navbar-fixed-top navbar-inverse">
 	<div class="navbar-header">
@@ -176,46 +215,8 @@
 			</form>
 		</li>
 	</ul>
-</nav><!-- /global-nav -->
+</nav>
 
-<div class="attach-header container-fluid">
-	<div class="row">
-		<nav class="global-breadcrumb col-sm-7 clearfix">
-			<ul class="list-inline list-breadcrumb">
-				<li>
-					<img src="resource/image/common/60x60.png" alt="logo">
-					<a href="#">プロジェクト1</a>
-					<ul class="popup js-popup list-unstyled">
-						<li><a href="#">&nbsp;ホーム</a></li>
-						<li><a href="#">&nbsp;課題の検索</a></li>
-						<li><a href="#">&nbsp;課題の追加</a></li>
-					</ul>
-				</li>
-				<li>課題の追加</li>
-			</ul>
-		</nav><!-- /global-breadcrumb -->
-		<nav class="task-nav col-sm-5 clearfix">
-			<ul class="list-inline list-delimiter text-right">
-				<li>
-					<a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;検索に戻る</a>
-				</li>
-				<li>
-					<a href="#"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp;課題テスト</a>
-				</li>
-				<li>
-					<a href="#"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>&nbsp;課題テスト</a>
-				</li>
-			</ul>
-		</nav><!-- /task-nav -->
-	</div>
-</div><!-- /attach-header -->
-
-<footer class="global-footer container-fluid text-center">
-	<a href="#pagetop" class="global-footer__pagetop">このページの一番上へ</a>
-	<p class="global-footer__copyright"><small>Backyard Copyright ©2015-2016 by <site><a href="#">mizzz</a></site> All rights reserved.</small><br>
-		<small>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></small>
-	</p>
-</footer>
 
 <!-- JavaScript -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
@@ -226,6 +227,7 @@
 <script>window.Backbone||document.write("<script type='text/javascript' src='resource/js/lib/backbone-1.2.3.min.js'>\x3C/script>")</script>
 <script src="resource/js/lib/bootstrap.min.js"></script>
 <!-- /JavaScript -->
+
 
 </body>
 </html>

@@ -8,6 +8,14 @@
  * @param  {number} $width テキスト横のスペース幅
  */
 /* ----------------------------------------
+	見出し
+---------------------------------------- */
+.header-stl-bdr {
+  padding-bottom: .5em;
+  border-bottom: 1px dashed #aaa;
+}
+
+/* ----------------------------------------
 	フォーム
 ---------------------------------------- */
 /* インプット要素の幅を拡げる */
@@ -275,10 +283,8 @@ body {
 main {
   margin-top: 20px;
 }
-main .main-header {
-  margin-bottom: 1em;
-  padding-bottom: .5em;
-  border-bottom: 1px dashed #aaa;
+main .header-stl-bdr {
+  margin-bottom: 10px;
   font-size: 20px;
 }
 
@@ -1460,6 +1466,64 @@ main .main-header {
   position: absolute;
   top: 610px;
   left: 650px;
+}
+
+/* プロフィール */
+.editprofile {
+  /* ----------------------------------------
+  	プロフィール
+  ---------------------------------------- */
+}
+.editprofile .profile {
+  min-height: 480px;
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+.editprofile .profile__menu {
+  float: left;
+  width: 30%;
+  padding: 20px 0 20px 20px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #f3f3f3;
+}
+.editprofile .profile__menu > li {
+  float: none;
+  margin-bottom: 0;
+  margin-right: -1px;
+}
+.editprofile .profile__menu > li > a {
+  margin-right: 0;
+  border: 1px solid #f3f3f3;
+  border-right: none;
+}
+.editprofile .profile__menu > li > a:hover {
+  border: 1px solid #aaa;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+  background-color: #fff;
+}
+.editprofile .profile__menu > li.active > a {
+  border: 1px solid #aaa;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+}
+.editprofile .profile__menu > li + li {
+  margin-top: 10px;
+}
+.editprofile .profile__content {
+  float: right;
+  width: 70%;
+  min-height: 480px;
+  padding: 20px;
+  border-left: 1px solid #aaa;
+  border-radius: 0 5px 5px 0;
+  background-color: #fff;
+}
+.editprofile .profile__content h2 {
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */

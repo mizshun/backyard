@@ -151,10 +151,8 @@ body {
 /* メインラッパー */
 main {
 	margin-top: 20px;
-	.main-header {
-		margin-bottom: 1em;
-		padding-bottom: .5em;
-		border-bottom: 1px dashed $base-border-color;
+	.header-stl-bdr {
+		margin-bottom: 10px;
 		font-size: $heading-font-size;
 	}
 }

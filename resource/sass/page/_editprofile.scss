@@ -1,0 +1,58 @@
+/* ----------------------------------------
+	プロフィール
+---------------------------------------- */
+.profile {
+	$height: 480px;
+	$padding: 20px;
+	min-height: $height;
+	margin-top: 20px;
+	border: 1px solid $base-border-color;
+	border-radius: 5px;
+	background-color: $base-bg-color;
+	&__menu {
+		float: left;
+		width: 30%;
+		padding: $padding 0 $padding $padding;
+		border: none;
+		border-radius: 5px 0 0 5px;
+		background-color: $base-bg-color;
+		> li {
+			float: none;
+			margin-bottom: 0;
+			margin-right: -1px;
+			> a {
+				margin-right: 0;
+				border: 1px solid $base-bg-color;
+				border-right: none;
+				&:hover{
+					border: 1px solid $base-border-color;
+					border-right: none;
+					border-radius: 3px 0 0 3px;
+					background-color: #fff;
+				}
+			}
+			&.active {
+				> a {
+					border: 1px solid $base-border-color;
+					border-right: none;
+					border-radius: 3px 0 0 3px;
+				}
+			}
+			+ li {
+				margin-top: 10px;
+			}
+		}
+	}
+	&__content {
+		float: right;
+		width: 70%;
+		min-height: $height;
+		padding: $padding;
+		border-left: 1px solid $base-border-color;
+		border-radius: 0 5px 5px 0;
+		background-color: #fff;
+		h2 {
+			font-size: $large-font-size;
+		}
+	}
+}
