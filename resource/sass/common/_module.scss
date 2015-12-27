@@ -146,13 +146,23 @@
 	ポップアップ
 ---------------------------------------- */
 .popup {
-	width: 120px;
+	width: 240px;
     padding: 10px;
 	border: 2px solid $base-border-color;
 	background-color: #fff;
-	z-index: 999;
-	a {
-		width: 100%;
-		line-height: 1.8;
+	z-index: 99;
+	&__header {
+		font-weight: bold;
+	}
+	&__content {
+		padding: 10px;
+		background-color: $base-bg-color;
+	}
+	&__group {
+		margin: 10px 0;
+	}
+	// modifier
+	&--lg {
+		width: 360px;
 	}
 }

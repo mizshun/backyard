@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プロジェクト名 | プロジェクトホーム - Backyard</title>
+<title>プロジェクト1(project) | プロジェクトホーム - Backyard</title>
 <link rel="stylesheet" href="./resource/css/bootstrap.min.css">
 <link rel="stylesheet" href="./resource/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="resource/css/style.css">
@@ -422,6 +422,41 @@
 			</aside>
 		</div>
 	</div>
+
+	<div class="popup panel panel-default">
+		<p class="popup__header panel-heading">表示設定</p>
+		<div class="popup__content">
+			<form action="" method="get">
+				<table>
+					<tbody>
+					<tr>
+						<th>表示件数:</th>
+						<td>
+							<input id="last-updated-num-50" type="radio" name="last-updated-num" value="50" checked>
+							<label for="last-updated-num-50">50</label>
+							<input id="last-updated-num-100" type="radio" name="last-updated-num" value="100">
+							<label for="last-updated-num-100">100</label>
+							<input id="last-updated-num-200" type="radio" name="last-updated-num" value="200">
+							<label for="last-updated-num-200">200</label>
+						</td>
+					</tr>
+					<tr>
+						<th>表示対象:</th>
+						<td>
+							<input id="enable-types-0" type="checkbox" name="enable-types" value="0" checked>
+							<label for="enable-types-0">課題</label><br>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<div class="popup__group text-right">
+					<input type="submit" class="btn btn-default btn-xs" value="反映する">
+					<a href="javascript:void(0);">キャンセル</a>
+				</div>
+			</form>
+			<p>ここで設定した内容はブラウザのクッキーに保存されます。次回表示時も有効です。</p>
+		</div>
+	</div>
 </main>
 
 
@@ -441,44 +476,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
 <script src="resource/js/lib/bootstrap.min.js"></script>
 <!-- /JavaScript -->
-
-
-
-<div id="latestUpdateSettingPopupDialogElement" class="panel panel-default hidden">
-	<p class="panel-heading">表示設定</p>
-	<div class="popup_content">
-		<!-- <form id="latestUpdateSettingPopupDialogForm" name="ChangeLastUpdatedNumAndType" action="/ChangeLastUpdatedNumAndType.action" method="post"> -->
-		<form id="" name="" action="/projects.html" method="get">
-			<table>
-				<tbody>
-				<tr>
-					<td>表示件数:</td>
-					<td>
-						<input id="last-updated-num-50" type="radio" name="last-updated-num" value="50" checked>
-						<label for="last-updated-num-50">50</label>
-						<input id="last-updated-num-100" type="radio" name="last-updated-num" value="100">
-						<label for="last-updated-num-100">100</label>
-						<input id="last-updated-num-200" type="radio" name="last-updated-num" value="200">
-						<label for="last-updated-num-200">200</label>
-					</td>
-				</tr>
-				<tr>
-					<td>表示対象:</td>
-					<td>
-						<input id="enable-types-0" type="checkbox" name="enable-types" value="0" checked>
-						<label for="enable-types-0">課題</label><br>
-					</td>
-				</tr>
-				</tbody>
-			</table>
-			<p class="popup_close">
-				<input type="submit" class="submitbtn Btn-gray" value="反映する">
-				<a id="latestUpdateSettingPopupDialogCloseButton" class="close-link" href="javascript:void(0);">キャンセル</a>
-			</p>
-		</form>
-		ここで設定した内容はブラウザのクッキーに保存されます。次回表示時も有効です。
-	</div>
-</div>
 
 
 </body>

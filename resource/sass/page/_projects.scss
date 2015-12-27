@@ -53,3 +53,17 @@
 		}
 	}
 }
+
+.popup {
+	th {
+		padding-right: 10px;
+	}
+}
+
+/* 仮位置用削除 */
+.popup {
+	display: block;
+	position: absolute;
+	top: 290px;
+	left: 700px;
+}

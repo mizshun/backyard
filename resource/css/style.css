@@ -122,15 +122,24 @@
 	ポップアップ
 ---------------------------------------- */
 .popup {
-  width: 120px;
+  width: 240px;
   padding: 10px;
   border: 2px solid #aaa;
   background-color: #fff;
-  z-index: 999;
+  z-index: 99;
 }
-.popup a {
-  width: 100%;
-  line-height: 1.8;
+.popup__header {
+  font-weight: bold;
+}
+.popup__content {
+  padding: 10px;
+  background-color: #f3f3f3;
+}
+.popup__group {
+  margin: 10px 0;
+}
+.popup--lg {
+  width: 360px;
 }
 
 /* ----------------------------------------
@@ -352,6 +361,7 @@ main .main-header {
   ---------------------------------------- */
   /* 日別一覧表示 */
   /* カテゴリー */
+  /* 仮位置用削除 */
 }
 .projects .tasklist__date-block table {
   border-bottom: 1px dotted #ddd;
@@ -393,6 +403,15 @@ main .main-header {
 }
 .projects .category .graph:first-child {
   margin-top: 0;
+}
+.projects .popup th {
+  padding-right: 10px;
+}
+.projects .popup {
+  display: block;
+  position: absolute;
+  top: 290px;
+  left: 700px;
 }
 
 /* 課題の表示 */
@@ -1328,10 +1347,12 @@ main .main-header {
   /* ----------------------------------------
   	検索結果
   ---------------------------------------- */
+  /* 仮位置用削除 */
 }
 .find .condition__header {
   padding: 10px;
   background-color: #ddd;
+  cursor: pointer;
 }
 .find .condition__icon span {
   display: none;
@@ -1403,6 +1424,42 @@ main .main-header {
 }
 .find .result {
   margin-top: 20px;
+}
+.find .result__pager > ul {
+  margin-bottom: 0;
+}
+.find .result__pager:first-of-type {
+  margin-bottom: 10px;
+}
+.find .result__pager:last-of-type {
+  margin-top: 10px;
+}
+.find .result__body > table:hover {
+  cursor: pointer;
+}
+.find .result__body > table th {
+  text-align: center;
+}
+.find .result__body > table th:hover {
+  text-decoration: underline;
+}
+.find .result__body > table td {
+  text-align: center;
+}
+.find .result__body > table td:nth-of-type(3) {
+  text-align: left;
+}
+.find .result__h-title {
+  width: 30%;
+}
+.find .popup th {
+  padding-right: 10px;
+}
+.find .popup {
+  display: block;
+  position: absolute;
+  top: 610px;
+  left: 650px;
 }
 
 /*# sourceMappingURL=style.css.map */

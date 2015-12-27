@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>プロジェクト名 | プロジェクトホーム - Backyard</title>
+<title>プロジェクト1(project) | 課題の検索 - Backyard</title>
 <link rel="stylesheet" href="./resource/css/bootstrap.min.css">
 <link rel="stylesheet" href="./resource/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="resource/css/style.css">
@@ -166,190 +166,346 @@
 
 
 <main class="find container-fluid">
-		<div class="primary">
-			<h1 class="main-header">課題の検索</h1>
+	<div class="primary">
+		<h1 class="main-header">課題の検索</h1>
+	</div>
+
+	<div class="condition">
+		<div class="condition__header">
+			<span class="condition__icon">
+				<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+				<span class="glyphicon glyphicon-minus-sign active" aria-hidden="true"></span>
+			</span>
+			検索結果：
+			<span>
+				<span class="js-key"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;プロジェクト</span>&nbsp;=&nbsp;
+				<span class="js-val">プロジェクト1</span>
+			</span>
+			<span>
+				<span class="js-key"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;状態</span>&nbsp;=&nbsp;
+				<span class="js-val">未対応</span>
+				<span class="js-val">処理中</span>
+				<span class="js-val">処理済み</span>
+			</span>
+		</div><!-- /condition__header-->
+
+		<div class="condition__body">
+			<div class="condition__toggle">
+				<ul class="nav nav-tabs">
+					<li role="presentation" class="active">
+						<a href="#js-cond-simple" aria-controls="edit" role="tab" data-toggle="tab" aria-expanded="true"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;シンプルな検索</a>
+					</li>
+					<li role="presentation" class="">
+						<a href="#js-cond-advanced" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;高度な検索</a>
+					</li>
+				</ul>
+			</div><!-- /condition__toggle -->
+
+			<form action="" method="get">
+				<!-- シンプルな検索 -->
+				<div class="tab-content">
+						<div role="tabpanel" class="condition__simple tab-pane fade active in" id="js-cond-simple">
+							<table class="table table-noborder">
+								<tbody>
+									<tr>
+										<th>状態</th>
+										<td class="condition__status">
+											<a href="#">すべて</a>&nbsp;|&nbsp;
+											<a href="#">未対応</a>&nbsp;|&nbsp;
+											<a href="#">処理中</a>&nbsp;|&nbsp;
+											<a href="#">処理済み</a>&nbsp;|&nbsp;
+											<a href="#">完了</a>&nbsp;|&nbsp;
+											<a href="#">完了以外</a>
+										</td>
+									</tr>
+									<tr>
+										<th>カテゴリー</th>
+										<td class="condition__category">
+											<a href="#">すべて</a>&nbsp;|&nbsp;
+											<a href="#">未設定</a>&nbsp;|&nbsp;
+											<a href="#">カテゴリー1</a>&nbsp;|&nbsp;
+											<a href="#">カテゴリー2</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><!-- /シンプルな検索 -->
+
+						<!-- 高度な検索 -->
+						<div role="tabpanel" class="condition__advanced tab-pane fade in" id="js-cond-advanced">
+							<ul class="nav nav-tabs">
+								<li role="presentation" class="active">
+									<a href="#js-cond-basic" aria-controls="edit" role="tab" data-toggle="tab" aria-expanded="true">基本</a>
+								</li>
+								<li role="presentation" class="">
+									<a href="#js-cond-date" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false">日付</a>
+								</li>
+							</ul>
+
+							<div class="tab-content">
+								<div role="tabpanel" class="condition__basic tab-pane fade active in" id="js-cond-basic">
+									<table class="table table-noborder">
+										<tbody>
+											<tr>
+												<th>状態 <span class="pull-right"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<a href="#">完了以外</a></span></th>
+												<th>カテゴリー</th>
+												<th>種別</th>
+												<th>優先度</th>
+												<th>完了理由</th>
+											</tr>
+											<tr>
+												<td>
+													<select name="" size="5" multiple="true">
+														<option value="">&nbsp;</option>
+														<option value="">未対応</option>
+														<option value="">処理中</option>
+														<option value="">処理済み</option>
+														<option value="">完了</option>
+													</select>
+												</td>
+												<td>
+													<select name="" size="5" multiple="true">
+														<option value="">&nbsp;</option>
+														<option value="">未設定</option>
+														<option value="">ヘッダー</option>
+														<option value="">追加カテゴリー1</option>
+														<option value="">追加カテゴリー2</option>
+													</select>
+												</td>
+												<td>
+													<select name="" size="5" multiple="true">
+														<option value="">&nbsp;</option>
+														<option value="">タスク</option>
+														<option value="">バグ</option>
+														<option value="">要望</option>
+														<option value="">その他</option>
+													</select>
+												</td>
+												<td>
+													<select name="" size="5" multiple="true">
+														<option value="">&nbsp;</option>
+														<option value="">高</option>
+														<option value="">中</option>
+														<option value="">低</option>
+													</select>
+												</td>
+												<td>
+													<select name="" size="5" multiple="true">
+														<option value="">&nbsp;</option>
+														<option value="">未設定</option>
+														<option value="">対応済み</option>
+														<option value="">対応しない</option>
+														<option value="">無効</option>
+														<option value="">重複</option>
+														<option value="">再現しない</option>
+													</select>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!-- /condition__date -->
+
+								<div role="tabpanel" class="condition__date tab-pane fade in" id="js-cond-date">
+									<table class="table table-noborder">
+										<tbody>
+											<tr>
+												<th>登録日</th>
+												<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
+											</tr>
+											<tr>
+												<th>更新日</th>
+												<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
+											</tr>
+											<tr>
+												<th>期限日</th>
+												<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text">&nbsp;&nbsp;&nbsp;&nbsp;※YYYY/MM/DDで入力してください。</td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!-- /condition__date -->
+							</div><!-- /tab-content -->
+						</div><!-- /高度な検索 -->
+				</div><!-- /tab-content -->
+
+				<div class="condition__keyword">
+					<table class="table table-noborder">
+						<tbody>
+							<tr>
+								<th>キーワード</th>
+								<td><input type="text"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div><!-- /condition__keyword -->
+
+				<div class="condition__btn btn-group-horizontal">
+					<a href="#">検索条件をクリアする</a>
+					<input class="btn btn-default" type="submit" value="この条件で検索">
+				</div>
+			</form>
+		</div><!-- /$condition__body -->
+	</div><!-- /conditon -->
+
+	<div class="result">
+		<div class="result__pager clearfix">
+			<p class="pull-left">全 6 件中 1 件 〜 6 件を表示 </p>
+			<ul class="list-inline list-delimiter pull-right">
+				<li><a href="javascript:void(0);"><span class="glyphicon glyphicon-cog"></span>&nbsp;検索結果の表示設定</a></li>
+				<li><a href="javascript:void(0);"><span class="glyphicon glyphicon-print"></span>&nbsp;印刷用ページ</a></li>
+			</ul>
+		</div><!-- /result__pager -->
+
+		<div class="result__body">
+			<table class="result__body table table-bordered table-striped table-hover">
+				<tbody>
+					<tr>
+						<th class="result__h-type">種別</th>
+						<th class="result__h-key">キー</th>
+						<th class="result__h-title">件名</th>
+						<th class="result__h-category">カテゴリー</th>
+						<th class="result__h-priority">優先度<span class="glyphicon glyphicon-triangle-top"></span><span class="glyphicon glyphicon-triangle-bottom"></span></th>
+						<th class="result__h-registered">登録日</th>
+						<th class="result__h-due">期限日</th>
+						<th class="result__h-updated">更新日</th>
+						<th class="result__h-status">状態</th>
+					</tr>
+
+					<tr>
+						<td><span class="label label-success">タスク</span></td>
+						<td>project-1</td>
+						<td>課題1</td>
+						<td>ヘッダー</td>
+						<td><span class="glyphicon glyphicon-arrow-up"></span></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><span class="label label-danger">未対応</span></td>
+					</tr>
+					<tr>
+						<td><span class="label label-danger">バグ</span></td>
+						<td>project-1</td>
+						<td>課題1</td>
+						<td>ヘッダー</td>
+						<td><span class="glyphicon glyphicon-arrow-right"></span></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><span class="label label-info">処理中</span></td>
+					</tr>
+					<tr>
+						<td><span class="label label-warning">要望</span></td>
+						<td>project-1</td>
+						<td>課題1</td>
+						<td>ヘッダー</td>
+						<td><span class="glyphicon glyphicon-arrow-down"></span></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><span class="label label-success">処理済み</span></td>
+					</tr>
+					<tr>
+						<td><span class="label label-primary">その他</span></td>
+						<td>project-1</td>
+						<td>私は当時どうしてもこの品評家に対して事のつどをするましない。  けっして結果が料理方はついにその発展たたほどに考えてしまっだをは誤解眺めですたいて、とてもには思ったたですなかっ。  癪にするだろものはどうしても毎日におもにだたない。人知れず三宅さんに評時分少し意味で間違ったばらばらその学校私か命令にという小相違だらしいですだて、その昨日も私かがた自力に執っば、岡田君の事の底の何の近頃今譴責と立って私他人とご買収をいように多分お挨拶にありたたて、はなはだどうしても融和にしたて始めでしょのが狭めなけれます。し</td>
+						<td>ヘッダー</td>
+						<td><span class="glyphicon glyphicon-arrow-up"></span></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><time datetime="2015-07-31">12月31日</time></td>
+						<td><span class="label label-default">完了</span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div><!-- /result__body -->
+
+		<div class="result__pager clearfix">
+			<p class="pull-left">全 6 件中 1 件 〜 6 件を表示 </p>
+			<ul class="list-inline list-delimiter pull-right">
+				<li><a href="javascript:void(0);"><span class="glyphicon glyphicon-cog"></span>&nbsp;検索結果の表示設定</a></li>
+				<li><a href="javascript:void(0);"><span class="glyphicon glyphicon-print"></span>&nbsp;印刷用ページ</a></li>
+			</ul>
+		</div><!-- /result__pager -->
+	</div><!-- /result -->
+
+	<div class="popup popup--lg panel panel-default">
+		<p class="popup__header panel-heading">検索結果の表示設定</p>
+		<div class="popup__content">
+			<form action="" method="get">
+				<table>
+					<tbody>
+						<tr>
+							<th>表示件数:</th>
+							<td>
+								<input id="last-updated-num-50" type="radio" name="last-updated-num" value="50" checked>
+								<label for="last-updated-num-50">50件</label>
+								<input id="last-updated-num-100" type="radio" name="last-updated-num" value="100">
+								<label for="last-updated-num-100">100件</label>
+								<input id="last-updated-num-200" type="radio" name="last-updated-num" value="200">
+								<label for="last-updated-num-200">200件</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table>
+					<tbody>
+					<tr>
+						<th rowspan="6">表示項目:</th>
+					</tr>
+					<tr>
+						<td>
+							<input id="disp-types" type="checkbox" name="disp-types" checked>
+							<label for="disp-types">種別</label>
+						</td>
+						<td>
+							<input id="disp-key" type="checkbox" name="disp-key" checked>
+							<label for="disp-key">キー</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input id="disp-title" type="checkbox" name="disp-title" checked>
+							<label for="disp-title">件名</label>
+						</td>
+						<td>
+							<input id="disp-category" type="checkbox" name="disp-category" checked>
+							<label for="disp-category">カテゴリー</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input id="disp-priority" type="checkbox" name="disp-priority" checked>
+							<label for="disp-priority">優先度</label>
+						</td>
+						<td>
+							<input id="disp-registered" type="checkbox" name="disp-registered" checked>
+							<label for="disp-registered">登録日</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input id="disp-due" type="checkbox" name="disp-due" checked>
+							<label for="disp-due">期限日</label>
+						</td>
+						<td>
+							<input id="disp-updated" type="checkbox" name="disp-updated" checked>
+							<label for="disp-updated">更新日</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input id="disp-status" type="checkbox" name="disp-status" checked>
+							<label for="disp-status">状態</label>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</form>
+			<p>ここで設定した内容はブラウザのクッキーに保存されます。次回表示時も有効です。</p>
+			<div class="popup__group text-right">
+				<a href="#">閉じる</a>
+			</div>
 		</div>
-
-		<div class="condition">
-			<div class="condition__header">
-				<span class="condition__icon">
-					<span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-					<span class="glyphicon glyphicon-minus-sign active" aria-hidden="true"></span>
-				</span>
-				検索結果：
-				<span>
-					<span class="js-key"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;プロジェクト</span>
-					<span class="js-val">プロジェクト</span>
-				</span>
-				<span>
-					<span class="js-key"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;状態</span>
-					<span class="js-val">未対応</span>
-					<span class="js-val">処理中</span>
-					<span class="js-val">処理済み</span>
-				</span>
-			</div><!-- /condition__header-->
-
-			<div class="condition__body">
-				<div class="condition__toggle">
-					<ul class="nav nav-tabs">
-						<li role="presentation" class="active">
-							<a href="#js-cond-simple" aria-controls="edit" role="tab" data-toggle="tab" aria-expanded="true"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;シンプルな検索</a>
-						</li>
-						<li role="presentation" class="">
-							<a href="#js-cond-advanced" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;高度な検索</a>
-						</li>
-					</ul>
-				</div><!-- /condition__toggle -->
-
-				<form action="" method="get">
-					<!-- シンプルな検索 -->
-					<div class="tab-content">
-							<div role="tabpanel" class="condition__simple tab-pane fade active in" id="js-cond-simple">
-								<table class="table table-noborder">
-									<tbody>
-										<tr>
-											<th>状態</th>
-											<td class="condition__status">
-												<a href="#">すべて</a>&nbsp;|&nbsp;
-												<a href="#">未対応</a>&nbsp;|&nbsp;
-												<a href="#">処理中</a>&nbsp;|&nbsp;
-												<a href="#">処理済み</a>&nbsp;|&nbsp;
-												<a href="#">完了</a>&nbsp;|&nbsp;
-												<a href="#">完了以外</a>
-											</td>
-										</tr>
-										<tr>
-											<th>カテゴリー</th>
-											<td class="condition__category">
-												<a href="#">すべて</a>&nbsp;|&nbsp;
-												<a href="#">未設定</a>&nbsp;|&nbsp;
-												<a href="#">カテゴリー1</a>&nbsp;|&nbsp;
-												<a href="#">カテゴリー2</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div><!-- /シンプルな検索 -->
-
-							<!-- 高度な検索 -->
-							<div role="tabpanel" class="condition__advanced tab-pane fade in" id="js-cond-advanced">
-								<ul class="nav nav-tabs">
-									<li role="presentation" class="active">
-										<a href="#js-cond-basic" aria-controls="edit" role="tab" data-toggle="tab" aria-expanded="true">基本</a>
-									</li>
-									<li role="presentation" class="">
-										<a href="#js-cond-date" aria-controls="preview" role="tab" data-toggle="tab" aria-expanded="false">日付</a>
-									</li>
-								</ul>
-
-								<div class="tab-content">
-									<div role="tabpanel" class="condition__basic tab-pane fade active in" id="js-cond-basic">
-										<table class="table table-noborder">
-											<tbody>
-												<tr>
-													<th>状態 <span class="pull-right"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<a href="#">完了以外</a></span></th>
-													<th>カテゴリー</th>
-													<th>種別</th>
-													<th>優先度</th>
-													<th>完了理由</th>
-												</tr>
-												<tr>
-													<td>
-														<select name="" size="5" multiple="true">
-															<option value="">&nbsp;</option>
-															<option value="">未対応</option>
-															<option value="">処理中</option>
-															<option value="">処理済み</option>
-															<option value="">完了</option>
-														</select>
-													</td>
-													<td>
-														<select name="" size="5" multiple="true">
-															<option value="">&nbsp;</option>
-															<option value="">未設定</option>
-															<option value="">ヘッダー</option>
-															<option value="">追加カテゴリー1</option>
-															<option value="">追加カテゴリー2</option>
-														</select>
-													</td>
-													<td>
-														<select name="" size="5" multiple="true">
-															<option value="">&nbsp;</option>
-															<option value="">タスク</option>
-															<option value="">バグ</option>
-															<option value="">要望</option>
-															<option value="">その他</option>
-														</select>
-													</td>
-													<td>
-														<select name="" size="5" multiple="true">
-															<option value="">&nbsp;</option>
-															<option value="">高</option>
-															<option value="">中</option>
-															<option value="">低</option>
-														</select>
-													</td>
-													<td>
-														<select name="" size="5" multiple="true">
-															<option value="">&nbsp;</option>
-															<option value="">未設定</option>
-															<option value="">対応済み</option>
-															<option value="">対応しない</option>
-															<option value="">無効</option>
-															<option value="">重複</option>
-															<option value="">再現しない</option>
-														</select>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div><!-- /condition__date -->
-
-									<div role="tabpanel" class="condition__date tab-pane fade in" id="js-cond-date">
-										<table class="table table-noborder">
-											<tbody>
-												<tr>
-													<th>登録日</th>
-													<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
-												</tr>
-												<tr>
-													<th>更新日</th>
-													<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text"></td>
-												</tr>
-												<tr>
-													<th>期限日</th>
-													<td><input type="text">&nbsp;&nbsp;〜&nbsp;&nbsp;<input type="text">&nbsp;&nbsp;&nbsp;&nbsp;※YYYY/MM/DDで入力してください。</td>
-												</tr>
-											</tbody>
-										</table>
-									</div><!-- /condition__date -->
-								</div><!-- /tab-content -->
-							</div><!-- /高度な検索 -->
-					</div><!-- /tab-content -->
-
-					<div class="condition__keyword">
-						<table class="table table-noborder">
-							<tbody>
-								<tr>
-									<th>キーワード</th>
-									<td><input type="text"></td>
-								</tr>
-							</tbody>
-						</table>
-					</div><!-- /condition__keyword -->
-
-					<div class="condition__btn btn-group-horizontal">
-						<a href="#">検索条件をクリアする</a>
-						<input class="btn btn-default" type="submit" value="この条件で検索">
-					</div>
-				</form>
-			</div><!-- /$condition__body -->
-		</div><!-- /conditon -->
-
-		<div class="result">
-			<!-- TODO -->
-			・検索結果テーブル
-		</div><!-- /result -->
+	</div><!-- /popup -->
 </main>
 
 
@@ -370,43 +526,6 @@
 <script>window.Backbone||document.write("<script type='text/javascript' src='resource/js/lib/backbone-1.2.3.min.js'>\x3C/script>")</script>
 <script src="resource/js/lib/bootstrap.min.js"></script>
 <!-- /JavaScript -->
-
-
-<div id="latestUpdateSettingPopupDialogElement" class="panel panel-default hidden">
-	<p class="panel-heading">表示設定</p>
-	<div class="popup_content">
-		<!-- <form id="latestUpdateSettingPopupDialogForm" name="ChangeLastUpdatedNumAndType" action="/ChangeLastUpdatedNumAndType.action" method="post"> -->
-		<form id="" name="" action="/projects.html" method="get">
-			<table>
-				<tbody>
-				<tr>
-					<td>表示件数:</td>
-					<td>
-						<input id="last-updated-num-50" type="radio" name="last-updated-num" value="50" checked>
-						<label for="last-updated-num-50">50</label>
-						<input id="last-updated-num-100" type="radio" name="last-updated-num" value="100">
-						<label for="last-updated-num-100">100</label>
-						<input id="last-updated-num-200" type="radio" name="last-updated-num" value="200">
-						<label for="last-updated-num-200">200</label>
-					</td>
-				</tr>
-				<tr>
-					<td>表示対象:</td>
-					<td>
-						<input id="enable-types-0" type="checkbox" name="enable-types" value="0" checked>
-						<label for="enable-types-0">課題</label><br>
-					</td>
-				</tr>
-				</tbody>
-			</table>
-			<p class="popup_close">
-				<input type="submit" class="submitbtn Btn-gray" value="反映する">
-				<a id="latestUpdateSettingPopupDialogCloseButton" class="close-link" href="javascript:void(0);">キャンセル</a>
-			</p>
-		</form>
-		ここで設定した内容はブラウザのクッキーに保存されます。次回表示時も有効です。
-	</div>
-</div>
 
 
 </body>
